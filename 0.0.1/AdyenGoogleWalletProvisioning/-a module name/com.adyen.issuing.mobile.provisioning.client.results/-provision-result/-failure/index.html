@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Failure</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../../index.html">
+                            A module name
+                    </a>
+            </div>
+            <div class="library-version">
+0.0.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":provisioning:dokkaHtml/release">Provisioning SDK</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="A module name::com.adyen.issuing.mobile.provisioning.client.results/ProvisionResult.Failure///PointingToDeclaration//-1836988822">
+  <div class="breadcrumbs"><a href="../../../../index.html">A module name</a><span class="delimiter">/</span><a href="../../index.html">com.adyen.issuing.mobile.provisioning.client.results</a><span class="delimiter">/</span><a href="../index.html">ProvisionResult</a><span class="delimiter">/</span><span class="current">Failure</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Failure</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Failure</a> : <a href="../index.html">ProvisionResult</a></div><p class="paragraph">Failure status codes.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-canceled/index.html">Canceled</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-get-sdk-output-not-called/index.html">GetSdkOutputNotCalled</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-provisioning-in-progress/index.html">ProvisioningInProgress</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-api-not-connected/index.html">ApiNotConnected</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-connection-suspended-during-call/index.html">ConnectionSuspendedDuringCall</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-developer-error/index.html">DeveloperError</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-error/index.html">Error</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-internal-error/index.html">InternalError</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-interrupted/index.html">Interrupted</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-invalid-account/index.html">InvalidAccount</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-network-error/index.html">NetworkError</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-reconnection-timed-out/index.html">ReconnectionTimedOut</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-reconnection-timed-out-during-update/index.html">ReconnectionTimedOutDuringUpdate</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-remote-exception/index.html">RemoteException</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-resolution-required/index.html">ResolutionRequired</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-sign-in-required/index.html">SignInRequired</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-timeout/index.html">Timeout</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-no-active-wallet/index.html">NoActiveWallet</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-token-not-found/index.html">TokenNotFound</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-invalid-token-state/index.html">InvalidTokenState</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-attestation-error/index.html">AttestationError</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-unavailable/index.html">Unavailable</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-unknown-status-code/index.html">UnknownStatusCode</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-invalid-sdk-input/index.html">InvalidSdkInput</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-other/index.html">Other</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="491574804%2FClasslikes%2F-1836988822" anchor-label="ApiNotConnected" id="491574804%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-api-not-connected/index.html"><span>Api</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="491574804%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-api-not-connected/index.html">ApiNotConnected</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The client attempted to call a method from an API that failed to connect.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-359155738%2FClasslikes%2F-1836988822" anchor-label="AttestationError" id="-359155738%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-attestation-error/index.html"><span>Attestation</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-359155738%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-attestation-error/index.html">AttestationError</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">Tokenization failed because the device did not pass a compatibility check.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1924315269%2FClasslikes%2F-1836988822" anchor-label="Canceled" id="1924315269%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-canceled/index.html"><span><span>Canceled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924315269%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-canceled/index.html">Canceled</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">Provisioning canceled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1827334728%2FClasslikes%2F-1836988822" anchor-label="ConnectionSuspendedDuringCall" id="1827334728%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-connection-suspended-during-call/index.html"><span>Connection</span><wbr></wbr><span>Suspended</span><wbr></wbr><span>During</span><wbr></wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1827334728%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-connection-suspended-during-call/index.html">ConnectionSuspendedDuringCall</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The connection was suspended while the call was in-flight.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1417723552%2FClasslikes%2F-1836988822" anchor-label="DeveloperError" id="1417723552%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-developer-error/index.html"><span>Developer</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1417723552%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-developer-error/index.html">DeveloperError</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The application is misconfigured.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="415571836%2FClasslikes%2F-1836988822" anchor-label="Error" id="415571836%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error/index.html"><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="415571836%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-error/index.html">Error</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The operation failed with no more detailed information.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1165105575%2FClasslikes%2F-1836988822" anchor-label="GetSdkOutputNotCalled" id="-1165105575%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-get-sdk-output-not-called/index.html"><span>Get</span><wbr></wbr><span>Sdk</span><wbr></wbr><span>Output</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Called</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1165105575%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-get-sdk-output-not-called/index.html">GetSdkOutputNotCalled</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">getSdkOutput() has not been called prior to card provisioning.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-503658855%2FClasslikes%2F-1836988822" anchor-label="InternalError" id="-503658855%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-internal-error/index.html"><span>Internal</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-503658855%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-internal-error/index.html">InternalError</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">An internal error occurred.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1019792962%2FClasslikes%2F-1836988822" anchor-label="Interrupted" id="1019792962%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-interrupted/index.html"><span><span>Interrupted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1019792962%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-interrupted/index.html">Interrupted</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">A blocking call was interrupted while waiting and did not run to completion.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1548299720%2FClasslikes%2F-1836988822" anchor-label="InvalidAccount" id="1548299720%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-invalid-account/index.html"><span>Invalid</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1548299720%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-invalid-account/index.html">InvalidAccount</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The client attempted to connect to the service with an invalid account name specified.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="312753117%2FClasslikes%2F-1836988822" anchor-label="InvalidSdkInput" id="312753117%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-invalid-sdk-input/index.html"><span>Invalid</span><wbr></wbr><span>Sdk</span><wbr></wbr><span><span>Input</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="312753117%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-invalid-sdk-input/index.html">InvalidSdkInput</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>errorMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The provided SDK Input string could not be parsed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1330981749%2FClasslikes%2F-1836988822" anchor-label="InvalidTokenState" id="1330981749%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-invalid-token-state/index.html"><span>Invalid</span><wbr></wbr><span>Token</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1330981749%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-invalid-token-state/index.html">InvalidTokenState</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The specified token was found but was not in a legal state for the operation to succeed. For example, this can happen when attempting to select as default a token that is not in the state TOKEN_STATE_ACTIVE.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-456832700%2FClasslikes%2F-1836988822" anchor-label="NetworkError" id="-456832700%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-network-error/index.html"><span>Network</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-456832700%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-network-error/index.html">NetworkError</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">A network error occurred.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-994757058%2FClasslikes%2F-1836988822" anchor-label="NoActiveWallet" id="-994757058%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-no-active-wallet/index.html"><span>No</span><wbr></wbr><span>Active</span><wbr></wbr><span><span>Wallet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-994757058%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-no-active-wallet/index.html">NoActiveWallet</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">No active wallet.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-858870924%2FClasslikes%2F-1836988822" anchor-label="Other" id="-858870924%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-other/index.html"><span><span>Other</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-858870924%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-other/index.html">Other</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">An unexpected exception occurred.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1727451103%2FClasslikes%2F-1836988822" anchor-label="ProvisioningInProgress" id="1727451103%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-provisioning-in-progress/index.html"><span>Provisioning</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Progress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1727451103%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-provisioning-in-progress/index.html">ProvisioningInProgress</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">Provisioning already in-progress for this card.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="174948214%2FClasslikes%2F-1836988822" anchor-label="ReconnectionTimedOut" id="174948214%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reconnection-timed-out/index.html"><span>Reconnection</span><wbr></wbr><span>Timed</span><wbr></wbr><span><span>Out</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="174948214%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-reconnection-timed-out/index.html">ReconnectionTimedOut</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The connection timed-out while attempting to re-connect.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="203621548%2FClasslikes%2F-1836988822" anchor-label="ReconnectionTimedOutDuringUpdate" id="203621548%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reconnection-timed-out-during-update/index.html"><span>Reconnection</span><wbr></wbr><span>Timed</span><wbr></wbr><span>Out</span><wbr></wbr><span>During</span><wbr></wbr><span><span>Update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="203621548%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-reconnection-timed-out-during-update/index.html">ReconnectionTimedOutDuringUpdate</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The connection timed-out while waiting for Google Play services to update.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1666300357%2FClasslikes%2F-1836988822" anchor-label="RemoteException" id="-1666300357%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-remote-exception/index.html"><span>Remote</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1666300357%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-remote-exception/index.html">RemoteException</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">There was a non-DeadObjectException RemoteException while calling a connected service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="742839475%2FClasslikes%2F-1836988822" anchor-label="ResolutionRequired" id="742839475%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-resolution-required/index.html"><span>Resolution</span><wbr></wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="742839475%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-resolution-required/index.html">ResolutionRequired</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">Completing the operation requires some form of resolution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-993105187%2FClasslikes%2F-1836988822" anchor-label="SignInRequired" id="-993105187%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sign-in-required/index.html"><span>Sign</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-993105187%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-sign-in-required/index.html">SignInRequired</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The client attempted to connect to the service but the user is not signed in.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1586388605%2FClasslikes%2F-1836988822" anchor-label="Timeout" id="-1586388605%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-timeout/index.html"><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1586388605%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-timeout/index.html">Timeout</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">Timed out while awaiting the result.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2087059708%2FClasslikes%2F-1836988822" anchor-label="TokenNotFound" id="2087059708%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-token-not-found/index.html"><span>Token</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Found</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2087059708%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-token-not-found/index.html">TokenNotFound</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The indicated issuer token ID does not match a token in the active wallet. This status can be returned by calls that specify an issuer token ID.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-319688716%2FClasslikes%2F-1836988822" anchor-label="Unavailable" id="-319688716%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unavailable/index.html"><span><span>Unavailable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-319688716%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-unavailable/index.html">Unavailable</a> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The TapAndPay API cannot be called by the current application. If you get this error, make sure you are calling the API using a package name and fingerprint that we have added to our allowlist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="296124219%2FClasslikes%2F-1836988822" anchor-label="UnknownStatusCode" id="296124219%2FClasslikes%2F-1836988822" data-filterable-set=":provisioning:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":provisioning:dokkaHtml/release" data-filterable-set=":provisioning:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unknown-status-code/index.html"><span>Unknown</span><wbr></wbr><span>Status</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="296124219%2FClasslikes%2F-1836988822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":provisioning:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unknown-status-code/index.html">UnknownStatusCode</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>statusCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span> : <a href="index.html">ProvisionResult.Failure</a></div><div class="brief "><p class="paragraph">The returned status code does not mop to any known status.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
