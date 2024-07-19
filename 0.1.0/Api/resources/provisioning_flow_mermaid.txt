@@ -1,0 +1,30 @@
+%%{init:{'theme':'forest'}}%%
+sequenceDiagram
+    box LightGrey MOBILE DEVICE
+    Participant APP
+    Participant SDK
+    end
+    Participant BACKEND
+    Participant ADYEN
+    BACKEND->>ADYEN: GET /networkTokenActivationData
+    Note right of BACKEND: Get activation data
+    ADYEN->>BACKEND: sdkInput
+    BACKEND->>APP: sdkInput 
+    APP->>SDK: create(sdkInput)
+    APP->>SDK: canProvision()
+    SDK->>APP: CanProvisionResult.CanBeProvisioned
+    APP->>SDK: getSdkOutput()
+    SDK->>APP: sdkOutput
+    APP->>BACKEND: sdkOutput
+    BACKEND->>ADYEN: POST /networkTokenActivationData
+    Note right of BACKEND: Get opaque card data
+    ADYEN->>BACKEND: sdkInput
+    BACKEND->>APP: sdkInput
+    APP->>SDK: provision(sdkInput)
+    rect rgb(163, 173, 116)
+    SDK-->>APP: onActivityResult()
+    Note left of SDK: Google API passes result to client Activity
+    APP-->>SDK: onActivityResult()
+    Note right of APP: Client App passes result to SDK
+    end
+    SDK->>APP: ProvisionResult.Success
