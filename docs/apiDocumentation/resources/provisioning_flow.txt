@@ -1,0 +1,24 @@
+%%{init:{'theme':'forest'}}%%
+sequenceDiagram
+    box LightGrey MOBILE DEVICE
+    Participant APP
+    Participant SDK
+    end
+    Participant BACKEND
+    Participant ADYEN
+    BACKEND->>ADYEN: GET /networkTokenActivationData
+    Note right of BACKEND: Get activation data
+    ADYEN->>BACKEND: sdkInput
+    BACKEND->>APP: sdkInput 
+    APP->>SDK: create(sdkInput)
+    APP->>SDK: canProvision()
+    SDK->>APP: CanProvisionResult.CanBeProvisioned
+    APP->>SDK: createSdkOutput()
+    SDK->>APP: sdkOutput
+    APP->>BACKEND: sdkOutput
+    BACKEND->>ADYEN: POST /networkTokenActivationData
+    Note right of BACKEND: Get opaque card data
+    ADYEN->>BACKEND: sdkInput
+    BACKEND->>APP: sdkInput
+    APP->>SDK: provision(sdkInput)
+    SDK->>APP: ProvisionResult.Success

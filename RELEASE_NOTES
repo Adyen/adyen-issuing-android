@@ -1,9 +1,7 @@
-## Added
-- hasWallet API function which provides a way to check if a Google Wallet exists on the device.
-- createWallet API function which allows a Google Wallet to be created on the device.
+## Removed
+- hasWallet API function as this check is now performed implicitly by the createSdkOutput API function.
+- createWallet API function as this call is now performed implicitly by the createSdkOutput API function (if required).
+- onActivityResult API function as the Activity result returned from the Google API is now handled internally within the SDK provisioning flow.
 
 ## Changes
-- The canProvision API function now returns a CannotBeProvisioned.NoActiveWallet result if there is no Google Wallet on the device.
-- The canProvision API function now returns a CannotBeProvisioned.ApiError result if a Google Tap and Pay specific exception occurs.
-- The getSdkOutput API function now returns more fine grained error result types including a Failure.NoActiveWallet result if there is no Google Wallet on the device.
-- The provision API function now returns a Failure.NoActiveWallet result if there is no Google Wallet on the device.
+- The getSdkOutput API function has been renamed to createSdkOutput and now will create a wallet if a wallet ID is required to be present in the SDK output and there is no pre-existing wallet.

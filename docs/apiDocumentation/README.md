@@ -57,13 +57,12 @@ Before you start card provisioning, you must get activation data for the specifi
 
 Initialize the `CardProvisioning` class that is used to check if the cardholder can add a payment card to their Google Wallet.
 
-The `CardProvisioning` instance is initialized by calling the `CardProvisioning.create()` static method. Pass in the `sdkInput` value from step 1, a function returning an `Activity` and, optionally, a request code. 
+The `CardProvisioning` instance is initialized by calling the `CardProvisioning.create()` static method. Pass in the `sdkInput` value from step 1 and a function returning an `Activity`. 
 
 ```kotlin
 fun create(
         sdkInput: String,
         activityProvider: () -> Activity,
-        provisionCardRequestCode: Int = REQUEST_PROVISION_CARD
     ): CardProvisioningCreateResult
 ```
 
@@ -109,9 +108,9 @@ when(result) {
 
 When the user taps the **Add card to Google Wallet** button the following sequence of operations should be triggered:
 
-1. Call the `getSdkOutput()` method of the `CardProvisioning` instance to retrieve the `sdkOutput` value.
+1. Call the `createSdkOutput()` method of the `CardProvisioning` instance to create the `sdkOutput` value.
 ```kotlin
-suspend fun getSdkOutput(): GetSdkOutputResult
+suspend fun createSdkOutput(): CreateSdkOutputResult
 ```
 2. From your back end, make a POST `paymentInstruments/{id}/networkTokenActivationData` request and pass the `sdkOutput` value to provision the payment instrument. The response contains the `sdkInput` object.
 3. Call the `provision()` method of the `CardProvisioning` instance, passing in the `sdkInput` value. This will trigger the Google provisioning flow and the function call will return the result of the provisioning request once the flow has completed. 
@@ -126,25 +125,3 @@ when (result) {
     is ProvisionResult.Failure -> handleProvisionFailure(result)
 }
 ```
-4. During the Google provisioning flow, the Google provisioning API will make a callback to the `onActivityResult()` of the `Activity` returned from the `activityProvider` function used to [initialize the provisioning client](#initialize-the-provisioning-client).
-```kotlin
-fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean
-```
-Override your `Activity.onActivityResult()` method so it calls the `onActivityResult()` method of the `CardProvisioning` instance. The `onActivityResult()` method will return `true` if the result was handled as a provisioning result or `false` if the result should be handled by the application. <br>
-**Note:** The call to `provision()` will remain suspended until the call is made to `cardProvisioning.onActivityResult()`.
-
-Example:
-```kotlin
-class MyActivity : Activity() {
-
-    ...
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (!cardProvisioning.onActivityResult(requestCode, resultCode, data)) {
-            super.onActivityResult(requestCode, resultCode, data)
-        }
-    }
-}
-
-```
-5. Once the `onActivityResult()` callback has completed, the `provision()` call will return and provide the result of the card provisioning process.
