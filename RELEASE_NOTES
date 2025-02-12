@@ -1,7 +1,7 @@
 ## Removed
-- hasWallet API function as this check is now performed implicitly by the createSdkOutput API function.
-- createWallet API function as this call is now performed implicitly by the createSdkOutput API function (if required).
-- onActivityResult API function as the Activity result returned from the Google API is now handled internally within the SDK provisioning flow.
+- **hasWallet** API function as this check is now performed implicitly by the **createSdkOutput** API function.
+- **createWallet** API function as this call is now performed implicitly by the **createSdkOutput** API function (if required).
+- **onActivityResult** API function as the Activity result returned from the Google API is now handled internally within the SDK provisioning flow.
 
 ## Changes
-- The getSdkOutput API function has been renamed to createSdkOutput and now will create a wallet if a wallet ID is required to be present in the SDK output and there is no pre-existing wallet.
+- The **getSdkOutput** API function has been renamed to **createSdkOutput** and now will create a wallet if a wallet ID is required to be present in the SDK output and there is no pre-existing wallet.

@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright (c) 2025 Adyen N.V.
+  ~
+  ~ This file is open source and available under the MIT license. See the LICENSE file for more info.
+  ~
+  ~ Created by davidw on 8/5/2024.
+  -->
+<resources>
+    <string name="app_name">AdyenGoogleWalletProvisioningExampleApp</string>
+    <string name="main_screen_title">Adyen Provisioning Example App</string>
+    <string name="already_added_to_google_pay">Card already added to Google Pay</string>
+    <string name="disabled">Card disabled</string>
+    <string name="does_not_support_google_pay">Card does not support Google Pay</string>
+    <string name="manage_card_label">Manage Card</string>
+    <string name="account">Account •••• %1$s</string>
+</resources>
