@@ -14,12 +14,13 @@ plugins {
 
 android {
     namespace = "com.adyen.issuing.mobile.provisioning.exampleapp"
-    compileSdk = 34
+    compileSdk = 35
+
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "com.adyen.issuing.mobile.provisioning.exampleapp"
         minSdk = 31
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

@@ -10,7 +10,7 @@ The SDK is available from [Maven Central](https://central.sonatype.com/artifact/
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing:provisioning:0.3.0")
+implementation("com.adyen.issuing:provisioning:0.3.1")
 ```
 
 ## Usage
@@ -63,7 +63,7 @@ val canProvision = cardProvisioning.canProvision() == CanProvisionResult.CanBePr
 
 When the cardholder opts to add a card to Google Wallet, initiate provisioning by performing the following steps:
 
-1. Make a call to `cardProvisioning.createSdkOuput()` to retrieve the `sdkOuput` string required for step 2.
+1. Make a call to `cardProvisioning.createSdkOuput()` to retrieve the `sdkOuput` string required for step 2. At this point, it is advisable to prevent the user from making further provisioning attempts (e.g. by disabling the `Add to Google Wallet` button) until the provisioning flow completes or is terminated.
 2. Make a `POST` `paymentInstruments/{paymentInstrumentId}/networkTokenActivationData` request from your backend to provision the payment instrument. The body must contain the `sdkOuput` obtained from step 1. The response contains the `sdkInput` object.
 3. Make a call to `cardProvisioning.provision()` passing the `sdkInput` value plus the cardholder name string and an instance of `CardAddress`:
 ```kotlin
@@ -80,8 +80,8 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.0/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.0/AdyenGoogleWalletProvisioning//)
+* [Full Documentation](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.1/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.1/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License

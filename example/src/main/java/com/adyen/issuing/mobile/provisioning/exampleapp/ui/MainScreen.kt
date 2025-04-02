@@ -68,6 +68,7 @@ fun MainScreen(
                 Spacer(Modifier.height(40.dp))
                 when (card) {
                     CardState.NotAddedToWallet -> GoogleWalletButton(onClick = onAddToWalletClicked)
+                    CardState.Provisioning -> GoogleWalletButton(onClick = {})
                     CardState.AddedToWallet -> CardLabel(R.string.already_added_to_google_pay)
                     CardState.Disabled -> CardLabel(R.string.disabled)
                     CardState.NotSupported -> CardLabel(R.string.does_not_support_google_pay)

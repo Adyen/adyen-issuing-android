@@ -104,6 +104,8 @@ class MainViewModel(
         cardAddress: CardAddress = CardAddress()
     ) {
             viewModelScope.launch {
+                // Disable the `Add to Google Wallet` button while we attempt to provision the card.
+                mutableCardState.emit(CardState.Provisioning)
                 // Request the SDK Output value from the provisioning SDK.
                 cardProvisioning?.createSdkOutput()?.let {
                     val state = when (it) {

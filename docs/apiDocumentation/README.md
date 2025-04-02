@@ -112,7 +112,10 @@ When the user taps the **Add card to Google Wallet** button the following sequen
 ```kotlin
 suspend fun createSdkOutput(): CreateSdkOutputResult
 ```
+**Note:** It is advisable, at the point this call is made, to prevent further provisioning attempts by disabling the **Add card to Google Wallet** button until the provisioning flow completes or is terminated. Processing of rapid taps on the **Add card to Google Wallet** button is likely to result in `InvalidSdkInput` errors.
+
 2. From your back end, make a POST `paymentInstruments/{id}/networkTokenActivationData` request and pass the `sdkOutput` value to provision the payment instrument. The response contains the `sdkInput` object.
+
 3. Call the `provision()` method of the `CardProvisioning` instance, passing in the `sdkInput` value. This will trigger the Google provisioning flow and the function call will return the result of the provisioning request once the flow has completed. 
 ```kotlin
 suspend fun provision(sdkInput: String, cardDisplayName: String, cardAddress: CardAddress): ProvisionResult
