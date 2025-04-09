@@ -1,19 +1,27 @@
-# Adyen Google Wallet Provisioning
+# Adyen Issuing Android
+
+This is the home page of the Adyen Issuing SDKs.
+
+The repository contains the following SDKs:
+
+- [Adyen Google Wallet Provisioning](#adyen-google-wallet-provisioning)
+
+## Adyen Google Wallet Provisioning
 
 `Adyen Google Wallet Provisioning` Android SDK simplifies integration with Google Wallet.
 
-## Installation
+### Installation
 
 The SDK is available from [Maven Central](https://central.sonatype.com/artifact/com.adyen.issuing/provisioning).
 
-### Import from Maven Central
+#### Import from Maven Central
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing:provisioning:0.3.1")
+implementation("com.adyen.issuing:provisioning:@latest-version@")
 ```
 
-## Usage
+### Usage
 
 The SDK interaction is performed through calls to an instance of `CardProvisioning`. This instance is provided by a static function of the `CardProvisioning` class:
 
@@ -32,7 +40,7 @@ suspend fun createSdkOutput(): GetSdkOutputResult
 suspend fun provision(sdkInput: String, cardDisplayName: String, cardAddress: CardAddress): ProvisionResult
 ```
 
-### Creating a provisioning client instance
+#### Creating a provisioning client instance
 
 Perform a `GET` request to endpoint `/paymentInstruments/{paymentInstrumentId}/networkTokenActivationData` from your backend. The response contains `sdkInput` data.
 
@@ -52,14 +60,14 @@ val cardProvisioning = when(result) {
 }
 ```
 
-### Checking if a card can be provisioned
+#### Checking if a card can be provisioned
 
 Check if the cardholder can add a payment card to their Google Wallet.
 ```kotlin
 val canProvision = cardProvisioning.canProvision() == CanProvisionResult.CanBeProvisioned
 ```
 
-### Initiate card provisioning
+#### Initiate card provisioning
 
 When the cardholder opts to add a card to Google Wallet, initiate provisioning by performing the following steps:
 
@@ -80,8 +88,8 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.1/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.1/AdyenGoogleWalletProvisioning//)
+* [Full Documentation](https://adyen.github.io/adyen-google-pay-provisioning-android/@latest-version@/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-google-pay-provisioning-android/@latest-version@/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License
