@@ -88,7 +88,7 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://github.com/Adyen/adyen-issuing-android/tree/gh-pages/0.3.1/Api)
+* [Full Documentation](https://github.com/Adyen/adyen-issuing-android/tree/gh-pages/0.3.1/Api/#readme)
 * [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-google-pay-provisioning-android/0.3.1/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
