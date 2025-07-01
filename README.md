@@ -18,7 +18,7 @@ The SDK is available from [Maven Central](https://central.sonatype.com/artifact/
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing:provisioning:0.3.1")
+implementation("com.adyen.issuing:provisioning:0.3.3")
 ```
 
 ### Usage
@@ -88,10 +88,10 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.3.1/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.3.1/AdyenGoogleWalletProvisioning//)
+* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.3.3/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.3.3/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License
 
-This SDK is available under the Apache License, Version 2.0. For more information, see the [LICENSE](https://github.com/Adyen/adyen-google-pay-provisioning-android/blob/main/LICENSE) file.
+This SDK is available under the Apache License, Version 2.0. For more information, see the [LICENSE](https://github.com/Adyen/adyen-issuing-android/blob/main/LICENSE) file.

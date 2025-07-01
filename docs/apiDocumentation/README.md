@@ -14,13 +14,32 @@ Once you have the API, the dependency must be made available to your development
 
 ## Get the Adyen SDK
 
-Adyen Google Wallet Provisioning SDK is available on [GitHub](https://github.com/Adyen/adyen-google-pay-provisioning-android/). Installation instructions can be found there.
+Adyen Google Wallet Provisioning SDK is available on [GitHub](https://github.com/Adyen/adyen-issuing-android/). Installation instructions can be found there.
 
 ### System requirements
 
 Before you start implementing the Adyen SDK, make sure that your system satisfies the following requirements:
 
-- Your application targets Android 5.0 (API level 21) or later.
+- Your application has a `minSdk` version of `21` or higher.
+- Your application has a `compileSdk` version of `35` or higher.
+
+### Allowlisting
+
+In order to enable the Google Tap and Pay service, your app will need to be allowlisted with Google. 
+Your Adyen Project Operations Manager/Implementation Engineer will do this for you but you will need to provide the following 
+information:
+
+- Your app's `applicationId`.
+- The SHA-256 fingerprints of your internal app builds.
+
+To find your app's application id, look in your main app module's `build.gradle` file for the value of the `applicationId` property.
+To get the SHA-256 fingerprint you can run the `signingReport` gradle command on your main app module, e.g. if your main app module is named `app` then `./gradlew :app:signingReport`. Alternatively, you can use tools such as [apksigner](https://developer.android.com/tools/apksigner)` or [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) if you prefer.
+
+When you have these values, pass them to your Adyen Project Operations Manager/Implementation Engineer who will request the allowlisting
+from Google.
+
+**Note:** Allowlisting will need to be requested for each individual developer machine as each will have its own 
+SHA-256 fingerprint.
 
 ## In-app provisioning
 
@@ -39,7 +58,7 @@ The following diagram walks you through the in-app provisioning flow:
 
 Before you start card provisioning, you must get activation data for the specified payment instrument.
 
-1. From your server, make a GET `/paymentInstruments/{id}/networkTokenActivationData` request and specify the `id` of the payment instrument in the path. To make this request, your [API credential](/issuing/manage-access/api-credentials-web-service) needs the following role:
+1. From your server, make a GET `/paymentInstruments/{id}/networkTokenActivationData` request and specify the `id` of the payment instrument in the path. To make this request, your [API credential](https://docs.adyen.com/issuing/manage-access/api-credentials-web-service) needs the following role:
 
     - **Bank Issuing PaymentInstrument Network Token Activation Data role**
 
@@ -73,7 +92,7 @@ val result = CardProvisioning.create(
     { myProvisiioningActivity }
 )
 val cardProvisioning = when(result) {
-    is CardProvisioningCreateResult.Success -> result.cardProvsioning
+    is CardProvisioningCreateResult.Success -> result.cardProvisioning
     is CardProvisioningCreateResult.Failed.GooglePayNotSupported -> throw Exception("Google Pay not supported")
     is CardProvisioningCreateResult.Failed.InvalidSdkInput -> throw Exception("Invalid sdk input")
 }

@@ -9,6 +9,9 @@
 package com.adyen.issuing.mobile.provisioning.exampleapp.ui.theme
 
 import android.app.Activity
+import android.os.Build
+import android.view.Window
+import android.view.WindowInsets
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -54,7 +57,7 @@ fun ExampleAppTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
+            setStatusBarColor(window, colorScheme.primary.toArgb())
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
@@ -64,4 +67,22 @@ fun ExampleAppTheme(
         typography = Typography,
         content = content
     )
+}
+
+private fun setStatusBarColor(window: Window, color: Int) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+        // Android 15+
+        window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+            val statusBarInsets = insets.getInsets(WindowInsets.Type.statusBars())
+            view.setBackgroundColor(color)
+
+            // Adjust padding to avoid overlap
+            view.setPadding(0, statusBarInsets.top, 0, 0)
+            insets
+        }
+    } else {
+        // Android 14 and below
+        @Suppress("DEPRECATION")
+        window.statusBarColor = color
+    }
 }

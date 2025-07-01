@@ -29,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.adyen.issuing.mobile.provisioning.exampleapp.R
+import com.adyen.issuing.mobile.provisioning.exampleapp.ui.theme.ExampleAppTheme
 
 @Composable
 internal fun AdyenCardDisplay(
@@ -77,7 +78,9 @@ internal fun AdyenCardDisplay(
 @Preview
 @Composable
 internal fun AdyenCardDisplayPreview() {
-    AdyenCardDisplay(Modifier, "6239")
+    ExampleAppTheme {
+        AdyenCardDisplay(Modifier, "6239")
+    }
 }
 
 private val grayScaleMatrix = ColorMatrix(
