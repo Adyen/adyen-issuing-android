@@ -18,8 +18,8 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set current marketing version
-      run: echo "MARKETING_VERSION=$(cat version.txt)" >> $GITHUB_OUTPUT
       id: get-current-marketing-version
+      run: echo "MARKETING_VERSION=$(cat version.txt)" >> $GITHUB_ENV
 
     - name: Deploy html docs to current version
       uses: peaceiris/actions-gh-pages@v3
