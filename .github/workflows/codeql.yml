@@ -50,11 +50,14 @@ jobs:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
           queries: security-and-quality
-          paths: .
-          paths-ignore: |
-            **/build/**
-            **/.gradle/**
-            **/generated/**
+          config: |
+            name: "Inline CodeQL Config"
+            paths:
+              - .
+            paths-ignore:
+              - '**/build/**'
+              - '**/.gradle/**'
+              - '**/generated/**'
 
       - name: Build (no tests)
         if: matrix.build-mode == 'manual'
