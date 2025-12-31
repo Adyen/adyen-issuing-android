@@ -9,7 +9,7 @@ permissions: write-all
 
 jobs:
   Deploy:
-    runs-on: macos-13
+    runs-on: macos-15
     permissions:
       contents: write
     steps:

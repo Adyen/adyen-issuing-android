@@ -6,7 +6,7 @@ Google Wallet In-App Provisioning enables cardholders to add their payment cards
 
 The Adyen Google Wallet Provisioning SDK has a transitive dependency on the Google Push Provisioning API (version 18.3.3). 
 
-The Google Push Provisioning API is not available publicly but can be provided by Adyen (ask your Adyen account manager) or [requested from Google](https://support.google.com/faqs/contact/pp_api_allowlist). 
+The Google Push Provisioning API is not available publicly but can be provided by Adyen (ask your Adyen Project Operations Manager/Implementation Engineer) or [requested from Google](https://support.google.com/faqs/contact/pp_api_allowlist). 
 
 Once you have the API, the dependency must be made available to your development environment. This can be done via Maven Local by adding the files under your `~/.m2` directory or they can be hosted in an internal Maven repository if you have one. 
 
@@ -122,6 +122,8 @@ when(result) {
     is CanProvisionResult.CannotBeProvisioned.UnknownFailure -> throw Exception("Unknown failure")
 }
 ```
+**Note:** If you find that the `canProvision()` method returns `CanProvisionResult.CanBeProvisioned` for already provisioned cards then this implies a card configuration issue. 
+In this case, please report this issue to your Adyen Project Operations Manager or Implementation Engineer and ask them to verify that the card scheme configuration is correct for your application.
 
 ### Provision the card
 

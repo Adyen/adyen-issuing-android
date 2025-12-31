@@ -1,15 +1,5 @@
-## Added
-* Android 16 support: the SDK internals are updated to meet the requirements for Android 16 support.
-* More documentation relating to whitelisting of client apps.
-
 ## Changed
-* The SDK **compileSdk** version is now set to 36 (Android 16).
-* Client application **compileSdk** now needs to be at least 35.
-* Github repo renamed to [adyen-issuing-android](https://github.com/Adyen/adyen-issuing-android/).
+* Relocated maven artifacts from `com.adyen.issuing:provisioning` to `com.adyen.issuing.provisioning:provisioning-sdk`
 * Internal changes:
-    * Updated Gradle: 8.9.0 -> 8.11.1
-    * Updated Kotlin: 2.0.21 -> 2.1.21
-    * Some functionality split out to separate `core` library
-
-## Fixed
-* In order to reduce the risk of theme namespace collisions, the provisioning library now uses a custom `AdyenProvisioning` theme rather than extending the Google `TapAndPay` theme.
+    * Updated Gradle: 8.11.1 -> 8.14.3
+    * Updated Kotlin: 2.1.21 -> 2.3.0

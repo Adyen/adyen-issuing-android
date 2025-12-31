@@ -1,1 +1,1 @@
-sourceset_dependencies='{":provisioning/debug":[],":provisioning/main":[],":provisioning/release":[]}'
+sourceset_dependencies='{":provisioning:sdk/debug":[],":provisioning:sdk/main":[],":provisioning:sdk/release":[]}'

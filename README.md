@@ -12,13 +12,13 @@ The repository contains the following SDKs:
 
 ### Installation
 
-The SDK is available from [Maven Central](https://central.sonatype.com/artifact/com.adyen.issuing/provisioning).
+The SDK is available from [Maven Central](https://central.sonatype.com/artifact/com.adyen.issuing.provisioning/provisioning-sdk).
 
 #### Import from Maven Central
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing:provisioning:0.3.3")
+implementation("com.adyen.issuing.provisioning:provisioning-sdk:0.3.4")
 ```
 
 ### Usage
@@ -36,7 +36,7 @@ The `CardProvisioning` class utilises `suspend` functions which return when the 
 
 ```kotlin
 suspend fun canProvision(): CanProvisionResult
-suspend fun createSdkOutput(): GetSdkOutputResult
+suspend fun createSdkOutput(): CreateSdkOutputResult
 suspend fun provision(sdkInput: String, cardDisplayName: String, cardAddress: CardAddress): ProvisionResult
 ```
 
@@ -88,8 +88,8 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.3.3/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.3.3/AdyenGoogleWalletProvisioning//)
+* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.3.4/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.3.4/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License
