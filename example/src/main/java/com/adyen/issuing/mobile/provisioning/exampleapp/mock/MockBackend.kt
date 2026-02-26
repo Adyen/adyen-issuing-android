@@ -13,7 +13,8 @@ import com.adyen.issuing.mobile.provisioning.exampleapp.data.CardActivationResul
 import com.adyen.issuing.mobile.provisioning.exampleapp.data.OpaqueCardDataResponse
 
 /**
- * Mock backend implementation.
+ * Mock backend implementation for demonstration purposes.
+ * In a real application, this would make network requests to your backend server.
  */
 class MockBackend : Backend {
 
@@ -36,11 +37,11 @@ class MockBackend : Backend {
         OpaqueCardDataResponse("dummy opaque data")
 
     companion object {
+        // This is a dummy base64 encoded JSON string representing the activation data.
+        // In a real scenario, this would be returned by your backend.
         private val dummySdkInput: String =
-            """eyJwYXltZW50SW5zdHJ1bWVudElkIjoiUEFZTUVOVF9JTlNUUlVNRU5UX0lEIiwiY2FyZGhvb
-            GRlck5hbWUiOiJKb2hubnkgQXBwbGVzZWVkIiwiYnJhbmQiOiJ2aXNhIiwibGFzdEZvdXIiOiI4OTUyIiwic3
-            VwcG9ydGVkV2FsbGV0cyI6WyJnb29nbGVQYXkiLCJhcHBsZVBheSJdfQ=="""
-                .trimIndent().replace(Regex("""(\r\n)|\n|\s"""), "")
+            "eyJwYXltZW50SW5zdHJ1bWVudElkIjoiUEFZTUVOVF9JTlNUUlVNRU5UX0lEIiwiY2FyZGhvb" +
+            "GRlck5hbWUiOiJKb2hubnkgQXBwbGVzZWVkIiwiYnJhbmQiOiJ2aXNhIiwibGFzdEZvdXIiOiI4OTUyIiwic3" +
+            "VwcG9ydGVkV2FsbGV0cyI6WyJnb29nbGVQYXkiLCJhcHBsZVBheSJdfQ=="
     }
 }
-

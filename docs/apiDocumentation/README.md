@@ -4,7 +4,7 @@ Google Wallet In-App Provisioning enables cardholders to add their payment cards
 
 ## Get the Google Push Provisioning API
 
-The Adyen Google Wallet Provisioning SDK has a transitive dependency on the Google Push Provisioning API (version 18.3.3). 
+The Adyen Google Wallet Provisioning SDK has a transitive dependency on the Google Push Provisioning API (version 18.7.0). 
 
 The Google Push Provisioning API is not available publicly but can be provided by Adyen (ask your Adyen Project Operations Manager/Implementation Engineer) or [requested from Google](https://support.google.com/faqs/contact/pp_api_allowlist). 
 
@@ -129,23 +129,60 @@ In this case, please report this issue to your Adyen Project Operations Manager 
 
 When the user taps the **Add card to Google Wallet** button the following sequence of operations should be triggered:
 
-1. Call the `createSdkOutput()` method of the `CardProvisioning` instance to create the `sdkOutput` value.
+1. Call the `provision()` method of the `CardProvisioning` instance, passing in the `cardDisplayName`, `cardAddress` and an `OpcProvider`. This will trigger the Google provisioning flow and the function call will return the result of the provisioning request once the flow has completed.
+
 ```kotlin
-suspend fun createSdkOutput(): CreateSdkOutputResult
+suspend fun provision(
+    cardDisplayName: String,
+    cardAddress: CardAddress,
+    opcProvider: OpcProvider,
+): ProvisionResult
 ```
 **Note:** It is advisable, at the point this call is made, to prevent further provisioning attempts by disabling the **Add card to Google Wallet** button until the provisioning flow completes or is terminated. Processing of rapid taps on the **Add card to Google Wallet** button is likely to result in `InvalidSdkInput` errors.
 
-2. From your back end, make a POST `paymentInstruments/{id}/networkTokenActivationData` request and pass the `sdkOutput` value to provision the payment instrument. The response contains the `sdkInput` object.
+The `OpcProvider` is a functional interface that you must implement to fetch the Opaque Payment Card (OPC) data from your backend.
 
-3. Call the `provision()` method of the `CardProvisioning` instance, passing in the `sdkInput` value. This will trigger the Google provisioning flow and the function call will return the result of the provisioning request once the flow has completed. 
 ```kotlin
-suspend fun provision(sdkInput: String, cardDisplayName: String, cardAddress: CardAddress): ProvisionResult
+fun interface OpcProvider {
+    suspend fun fetchOpc(paymentInstrumentId: String, sdkOutput: String): String
+}
 ```
+
 Example:
 ```kotlin
-val result = client.provision(sdkInput, "John Doe", CardAddress())
+val opcProvider = OpcProvider { paymentInstrumentId, sdkOutput ->
+    // Make a network request to your backend to get the OPC data
+    // Your backend should make a POST /paymentInstruments/{id}/networkTokenActivationData request
+    // passing the sdkOutput to provision the payment instrument.
+    // The response contains the sdkInput (which is the OPC data).
+    myBackendService.getOpc(paymentInstrumentId, sdkOutput)
+}
+
+val result = client.provision("John Doe", CardAddress(), opcProvider)
+
 when (result) {
     is ProvisionResult.Success -> handleProvisionSuccess(result)
     is ProvisionResult.Failure -> handleProvisionFailure(result)
 }
 ```
+
+## Migrating from SDK versions prior to 0.4.0
+
+In versions of the SDK prior to 0.4.0, the provisioning flow required the client application to manually orchestrate the fetching of the Opaque Payment Card (OPC) data. This involved calling `createSdkOutput()`, sending the result to the backend, receiving the OPC, and then calling `provision()`.
+
+In version 0.4.0 and later, this flow has been simplified. The `createSdkOutput()` method and the `provision(sdkInput, cardDisplayName, cardAddress)` method have been deprecated.
+
+To migrate to the new flow:
+
+1.  Remove the call to `createSdkOutput()`.
+2.  Implement the `OpcProvider` interface. This interface encapsulates the logic for fetching the OPC from your backend.
+3.  Call the new `provision(cardDisplayName, cardAddress, opcProvider)` method, passing in your `OpcProvider` implementation.
+
+The SDK will now handle the orchestration of fetching the OPC data using your provided `OpcProvider`.
+
+## Troubleshooting
+
+* **Google Tap and Pay dependency not found** - make sure you have the `com.google.android.gms:play-services-tapandpay:18.7.0` dependency correctly hosted using maven local.
+* **If you get a 15009 error returned from API calls** then check you have the application id and fingerprint whitelisted with Google.
+* **If `canProvision()` returns `CanBeProvisioned` after a card has been provisioned** then is very likely to be due to incorrect card confiuration with the card scheme. Often the problem is the application id has been incorrectly configured.
+* **If there is an error message like "Something went wrong, please try again" displayed during the provisioning flow** then this is also likely to be due to card configuration. Validate this by attempting to manually provision the payment instrument. If manual provisioning fails then it is also expected that push provisioning will fail.

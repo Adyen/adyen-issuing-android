@@ -8,4 +8,8 @@
 
 package com.adyen.issuing.mobile.provisioning.exampleapp.data
 
+/**
+ * Response from the backend containing the Opaque Payment Card (OPC) data.
+ * @param sdkInput The Base64 encoded OPC string.
+ */
 data class OpaqueCardDataResponse(val sdkInput: String)

@@ -1,5 +1,9 @@
 ## Changed
-* Relocated maven artifacts from `com.adyen.issuing:provisioning` to `com.adyen.issuing.provisioning:provisioning-sdk`
-* Internal changes:
-    * Updated Gradle: 8.11.1 -> 8.14.3
-    * Updated Kotlin: 2.1.21 -> 2.3.0
+* Public API changes:
+    * Added OpcProvider type
+    * Added function CardProvisioning.provision(cardDisplayName, cardAddress, opcProvider)
+    * Deprecated sealed class CreateSdkOutputResult
+    * Deprecated function CardProvisioning.createSdkOutput()
+    * Deprecated function CardProvisioning.provision(sdkInput, cardDisplayName, cardAddress)
+* Updated README files to reflect public API changes
+* Updated example app to reflect public API changes

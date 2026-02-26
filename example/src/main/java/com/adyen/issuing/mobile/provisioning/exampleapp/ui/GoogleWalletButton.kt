@@ -28,6 +28,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.adyen.issuing.mobile.provisioning.exampleapp.R
 
+/**
+ * A button that follows the Google Wallet branding guidelines.
+ *
+ * See [Google Wallet brand guidelines](https://developers.google.com/pay/issuers/apis/push-provisioning/android/branding-guidelines)
+ * for more information on how to display the "Add to Google Wallet" button.
+ */
 @Composable
 internal fun GoogleWalletButton(
     modifier: Modifier = Modifier,

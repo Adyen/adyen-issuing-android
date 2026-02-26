@@ -8,7 +8,18 @@
 
 package com.adyen.issuing.mobile.provisioning.exampleapp.data
 
+/**
+ * Result of the card activation request to the backend.
+ */
 sealed interface CardActivationResult {
+    /**
+     * The card is active and can be provisioned.
+     * @param sdkInput The activation data required to initialize the provisioning SDK.
+     */
     data class Active(val sdkInput: String) : CardActivationResult
+
+    /**
+     * The card is disabled or cannot be provisioned.
+     */
     data object Disabled : CardActivationResult
 }

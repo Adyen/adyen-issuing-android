@@ -1,8 +1,8 @@
 [versions]
 android-gradle = "8.13.2" # make sure to update version in libs.versions.toml and buildLibs.versions.toml as well.
 compose-runtime = "1.10.0"
-provisioning = "0.3.4"
-kotlin = "2.3.0"
+provisioning = "0.4.0-alpha01"
+kotlin = "2.3.10"
 material3 = "1.4.0"
 coreKtx = "1.17.0"
 lifecycleRuntimeKtx = "2.10.0"

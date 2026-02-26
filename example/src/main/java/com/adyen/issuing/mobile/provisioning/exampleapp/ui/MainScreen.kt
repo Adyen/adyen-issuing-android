@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -42,6 +43,7 @@ fun MainScreen(
     lastFour: String,
     card: CardState,
     onAddToWalletClicked: () -> Unit,
+    onRetryClicked: () -> Unit,
 ) {
     Scaffold(
         topBar = {
@@ -66,6 +68,10 @@ fun MainScreen(
                 Spacer(Modifier.height(40.dp))
                 AdyenCardDisplay(lastFour = lastFour)
                 Spacer(Modifier.height(40.dp))
+                // Display the appropriate UI based on the card state.
+                // If the card is not added to the wallet, show the "Add to Google Wallet" button.
+                // If the card is already added, show a label indicating that.
+                // If the card is provisioning, show the button but disable it (or show a loading indicator).
                 when (card) {
                     CardState.NotAddedToWallet -> GoogleWalletButton(onClick = onAddToWalletClicked)
                     CardState.Provisioning -> GoogleWalletButton(onClick = {})
@@ -73,7 +79,7 @@ fun MainScreen(
                     CardState.Disabled -> CardLabel(R.string.disabled)
                     CardState.NotSupported -> CardLabel(R.string.does_not_support_google_pay)
                     CardState.Loading -> Loading()
-                    is CardState.Error -> CardLabel(card.message ?: "An error occurred")
+                    is CardState.Error -> ErrorState(card.message ?: "An error occurred", onRetryClicked)
                 }
             }
         }
@@ -121,12 +127,23 @@ fun CardLabel(@StringRes stringResourceId: Int) {
     CardLabel(label = stringResource(id = stringResourceId))
 }
 
+@Composable
+fun ErrorState(message: String, onRetryClicked: () -> Unit) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        CardLabel(message)
+        Button(onClick = onRetryClicked) {
+            Text(stringResource(R.string.retry))
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
     MainScreen(
         lastFour = "1234",
         card = CardState.NotAddedToWallet,
-        onAddToWalletClicked = {}
+        onAddToWalletClicked = {},
+        onRetryClicked = {}
     )
 }

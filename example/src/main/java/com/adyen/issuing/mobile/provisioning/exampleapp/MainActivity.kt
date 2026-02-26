@@ -26,6 +26,8 @@ import com.adyen.issuing.mobile.provisioning.exampleapp.viewmodel.MainViewModelF
 class MainActivity : ComponentActivity() {
 
     // Create the MainViewModel and pass in the Activity provider.
+    // The Activity provider is a lambda that returns the current Activity.
+    // This is used by the provisioning SDK to launch the Google Wallet add-to-wallet flow.
     private val viewModel: MainViewModel by viewModels {
         MainViewModelFactory { this }
     }
@@ -42,7 +44,8 @@ class MainActivity : ComponentActivity() {
                     MainScreen(
                         card = cardState,
                         lastFour = "1234",
-                        onAddToWalletClicked = viewModel::provisionCard
+                        onAddToWalletClicked = viewModel::provisionCard,
+                        onRetryClicked = viewModel::retry
                     )
                 }
             }
