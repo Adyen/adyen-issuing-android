@@ -99,7 +99,7 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Example App](example/README.md)
+* [Example App](example/)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 * [Migrating from SDK versions prior to 0.4.0](docs/apiDocumentation/README.md#migrating-from-sdk-versions-prior-to-040)
 * [Troubleshooting](docs/apiDocumentation/README.md#troubleshooting)
