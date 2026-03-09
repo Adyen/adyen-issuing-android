@@ -18,8 +18,12 @@ The SDK is available from [Maven Central](https://central.sonatype.com/artifact/
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing.provisioning:provisioning-sdk:0.3.4")
+implementation("com.adyen.issuing.provisioning:provisioning-sdk:0.4.0")
 ```
+
+#### Get the Google Push Provisioning API
+
+See [here](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#get-the-google-push-provisioning-api) for instructions on how to request and install the `Google Push Provisioning API`.
 
 ### Usage
 
@@ -36,8 +40,7 @@ The `CardProvisioning` class utilises `suspend` functions which return when the 
 
 ```kotlin
 suspend fun canProvision(): CanProvisionResult
-suspend fun createSdkOutput(): CreateSdkOutputResult
-suspend fun provision(sdkInput: String, cardDisplayName: String, cardAddress: CardAddress): ProvisionResult
+suspend fun provision(cardDisplayName: String, cardAddress: CardAddress, opcProvider: OpcProvider): ProvisionResult
 ```
 
 #### Creating a provisioning client instance
@@ -71,14 +74,26 @@ val canProvision = cardProvisioning.canProvision() == CanProvisionResult.CanBePr
 
 When the cardholder opts to add a card to Google Wallet, initiate provisioning by performing the following steps:
 
-1. Make a call to `cardProvisioning.createSdkOuput()` to retrieve the `sdkOuput` string required for step 2. At this point, it is advisable to prevent the user from making further provisioning attempts (e.g. by disabling the `Add to Google Wallet` button) until the provisioning flow completes or is terminated.
-2. Make a `POST` `paymentInstruments/{paymentInstrumentId}/networkTokenActivationData` request from your backend to provision the payment instrument. The body must contain the `sdkOuput` obtained from step 1. The response contains the `sdkInput` object.
-3. Make a call to `cardProvisioning.provision()` passing the `sdkInput` value plus the cardholder name string and an instance of `CardAddress`:
+1. Implement the `OpcProvider` interface. This interface is responsible for fetching the Opaque Payment Card (OPC) data from your backend.
+   The `fetchOpc` function will be called by the SDK during the provisioning flow.
+   Inside `fetchOpc`, make a `POST` `paymentInstruments/{paymentInstrumentId}/networkTokenActivationData` request from your backend. The body must contain the `sdkOutput` provided by the SDK. The response contains the `sdkInput` object (which is the OPC).
+
+```kotlin
+val opcProvider = OpcProvider { paymentInstrumentId, sdkOutput ->
+    // Make network request to your backend to get the OPC
+    // POST /paymentInstruments/{paymentInstrumentId}/networkTokenActivationData
+    // Body: { "sdkOutput": sdkOutput }
+    // Return the OPC string from the response
+    return@OpcProvider opcString
+}
+```
+
+2. Make a call to `cardProvisioning.provision()` passing the cardholder name string, an instance of `CardAddress`, and the `opcProvider`:
 ```kotlin
 cardProvisioning.provision(
-    sdkInput = sdkInput,
     cardDisplayName = "John Doe",
-    cardAddress = CardAddress()
+    cardAddress = CardAddress(),
+    opcProvider = opcProvider
 )
 ```
 
@@ -88,9 +103,12 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 
 ## See also
 
-* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.3.4/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.3.4/AdyenGoogleWalletProvisioning//)
+* [Example App](example/README.md)
+* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.4.0/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
+* [Migrating from SDK versions prior to 0.4.0](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#migrating-from-sdk-versions-prior-to-040)
+* [Troubleshooting](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#troubleshooting)
 
 ## License
 
