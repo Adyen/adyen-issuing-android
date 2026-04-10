@@ -1,7 +1,7 @@
 [versions]
-android-gradle = "8.13.2" # make sure to update version in libs.versions.toml and buildLibs.versions.toml as well.
+android-gradle = "9.1.0" # make sure to update version in libs.versions.toml and buildLibs.versions.toml as well.
 compose-runtime = "1.10.0"
-provisioning = "0.4.0"
+provisioning = "0.4.1"
 kotlin = "2.3.10"
 material3 = "1.4.0"
 coreKtx = "1.17.0"

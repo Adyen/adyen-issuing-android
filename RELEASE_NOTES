@@ -1,10 +1,5 @@
 ## Changed
-* Public API changes:
-    * Added OpcProvider type
-    * Added function CardProvisioning.provision(cardDisplayName, cardAddress, opcProvider)
-    * Deprecated sealed class CreateSdkOutputResult
-    * Deprecated function CardProvisioning.createSdkOutput()
-    * Deprecated function CardProvisioning.provision(sdkInput, cardDisplayName, cardAddress)
-* Updated README files to reflect public API changes
-* Updated example app to reflect public API changes
-* Updated Google Tap and Pay SDK version to 18.8.0
+* Android Gradle Plugin version updated to 9.1.0
+
+## Fixed
+* Issue where provisioning could fail for Mastercard cards when no wallet exists

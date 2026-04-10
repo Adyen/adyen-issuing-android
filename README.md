@@ -18,12 +18,12 @@ The SDK is available from [Maven Central](https://central.sonatype.com/artifact/
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```kotlin
-implementation("com.adyen.issuing.provisioning:provisioning-sdk:0.4.0")
+implementation("com.adyen.issuing.provisioning:provisioning-sdk:0.4.1")
 ```
 
 #### Get the Google Push Provisioning API
 
-See [here](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#get-the-google-push-provisioning-api) for instructions on how to request and install the `Google Push Provisioning API`.
+See [here](https://adyen.github.io/adyen-issuing-android/0.4.1/Api/#get-the-google-push-provisioning-api) for instructions on how to request and install the `Google Push Provisioning API`.
 
 ### Usage
 
@@ -104,11 +104,11 @@ For more documentation refer to our [complete documentation](https://docs.adyen.
 ## See also
 
 * [Example App](example/README.md)
-* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/)
-* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.4.0/AdyenGoogleWalletProvisioning//)
+* [Full Documentation](https://adyen.github.io/adyen-issuing-android/0.4.1/Api/)
+* [SDK Reference Adyen Google Pay Provisioning](https://adyen.github.io/adyen-issuing-android/0.4.1/AdyenGoogleWalletProvisioning//)
 * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
-* [Migrating from SDK versions prior to 0.4.0](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#migrating-from-sdk-versions-prior-to-040)
-* [Troubleshooting](https://adyen.github.io/adyen-issuing-android/0.4.0/Api/#troubleshooting)
+* [Migrating from SDK versions prior to 0.4.0](https://adyen.github.io/adyen-issuing-android/0.4.1/Api/#migrating-from-sdk-versions-prior-to-040)
+* [Troubleshooting](https://adyen.github.io/adyen-issuing-android/0.4.1/Api/#troubleshooting)
 
 ## License
 
