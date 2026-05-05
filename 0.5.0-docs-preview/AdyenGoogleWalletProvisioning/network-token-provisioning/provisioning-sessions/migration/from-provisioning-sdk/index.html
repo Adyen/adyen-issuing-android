@@ -1,0 +1,2735 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Android SDKs for Adyen's card issuing product suite — Google Wallet provisioning (direct and session-based) and card reveal.">
+      
+      
+      
+        <link rel="canonical" href="https://adyen.github.io/adyen-issuing-android/network-token-provisioning/provisioning-sessions/migration/from-provisioning-sdk/">
+      
+      
+        <link rel="prev" href="../../essentials/getting-started/">
+      
+      
+        <link rel="next" href="../../releases/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Migration - Adyen Issuing Android SDKs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrating-from-the-offline-provisioning-sdk-to-the-session-based-provisioning-sdk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Adyen Issuing Android SDKs" class="md-header__button md-logo" aria-label="Adyen Issuing Android SDKs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adyen Issuing Android SDKs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Adyen/adyen-issuing-android" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Adyen/adyen-issuing-android
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Adyen Issuing Android SDKs" class="md-nav__button md-logo" aria-label="Adyen Issuing Android SDKs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Adyen Issuing Android SDKs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Adyen/adyen-issuing-android" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Adyen/adyen-issuing-android
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Token Provisioning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network Token Provisioning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../google-push-provisioning-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Push Provisioning API Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../example-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session-based Provisioning SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Session-based Provisioning SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essentials/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why migrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-provisioning-sdk-four-step-flow-with-opc-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline Provisioning SDK — four-step flow with OPC callback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-based-provisioning-sdk-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session-based Provisioning SDK — three-step flow with no per-call backend involvement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-goes-away" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What goes away
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-replaces-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What replaces them
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-code-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client code changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client code changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-offline-provisioning-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before — Offline Provisioning SDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-session-based-provisioning-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After — Session-based Provisioning SDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-type-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result-type expansion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-remains-unchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What remains unchanged
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step migration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_2" id="__nav_2_5_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningSession
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_3" id="__nav_2_5_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Enum Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningEnvironment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_4" id="__nav_2_5_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sealed Interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sealed Interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CanProvisionResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisionResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_5" id="__nav_2_5_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sealed Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sealed Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningSessionCreateResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline Provisioning SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Offline Provisioning SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/essentials/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/migration/from-pre-0.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5_2" id="__nav_2_6_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CardProvisioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-opc-provider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpcProvider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5_3" id="__nav_2_6_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CardAddress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5_4" id="__nav_2_6_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sealed Interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sealed Interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CanProvisionResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CardProvisioningCreateResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisionResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_5_5" id="__nav_2_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annotations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Annotations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.annotation/-adyen-experimental-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AdyenExperimentalApi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../provisioning-sdk/api/reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/security-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../additional-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why migrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-provisioning-sdk-four-step-flow-with-opc-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline Provisioning SDK — four-step flow with OPC callback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-based-provisioning-sdk-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session-based Provisioning SDK — three-step flow with no per-call backend involvement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-goes-away" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What goes away
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-replaces-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What replaces them
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-code-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client code changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client code changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-offline-provisioning-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before — Offline Provisioning SDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-session-based-provisioning-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After — Session-based Provisioning SDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-type-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result-type expansion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-remains-unchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What remains unchanged
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step migration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="migrating-from-the-offline-provisioning-sdk-to-the-session-based-provisioning-sdk">Migrating from the Offline Provisioning SDK to the Session-based Provisioning SDK<a class="headerlink" href="#migrating-from-the-offline-provisioning-sdk-to-the-session-based-provisioning-sdk" title="Link to this section">&para;</a></h1>
+<p>Guidance for moving an existing integration from the <a href="../../../provisioning-sdk/">Offline Provisioning SDK</a> to the <a href="../../">Session-based Provisioning SDK</a>.</p>
+<p>The <a href="../../../example-app/">example app</a> contains both integrations side-by-side under <code>provisioningsdk/</code> and <code>provisioningsessions/</code>, sharing a single <code>ProvisioningRepository</code> interface — a useful concrete reference for the diff described below.</p>
+<div class="admonition tip">
+<p class="admonition-title">Coming from a <code>&lt; 0.4.0</code> Offline Provisioning SDK?</p>
+<p>You don't need to do the <a href="../../../provisioning-sdk/migration/from-pre-0.4/">pre-0.4 migration</a> first. The "Before" snippets on this page show the post-<code>0.4.0</code> Offline Provisioning SDK API so the diff to the Session-based Provisioning SDK is small, but if your existing integration is on <code>&lt; 0.4.0</code> you can replace it with the Session-based flow directly — none of the pre-<code>0.4.0</code> <code>createSdkOutput()</code> / manual OPC orchestration carries over either way. Use the <a href="../../essentials/getting-started/">Session-based Provisioning SDK — Getting Started</a> as your primary reference and treat the "Before" snippets here as illustrative of what the Offline Provisioning SDK call site looks like, not as a prerequisite your code must already match.</p>
+</div>
+<h2 id="why-migrate">Why migrate<a class="headerlink" href="#why-migrate" title="Link to this section">&para;</a></h2>
+<p>Session-based provisioning consolidates several integration concerns that the Offline Provisioning SDK delegates to the backend:</p>
+<ul>
+<li><strong>Smaller backend surface area.</strong> A single session-token endpoint replaces the two-leg <code>networkTokenActivationData</code> exchange (<code>GET</code> for <code>sdkInput</code>, <code>POST</code> with <code>sdkOutput</code> for OPC). Once the session token is issued, the SDK handles the remainder of the provisioning protocol with Adyen internally.</li>
+<li><strong>Multi-card sessions.</strong> A single <code>ProvisioningSession</code> covers a <code>Set&lt;String&gt;</code> of payment-instrument IDs, so flows that present several cards at once (e.g. a wallet management screen) incur the session-creation cost only once.</li>
+<li><strong>Tamper-detection signals.</strong> The session pipeline surfaces device-tamper outcomes alongside the standard provisioning results, providing an integrated signal in client error handling rather than a separate workflow.</li>
+<li><strong>Simpler client lifecycle.</strong> No <code>OpcProvider</code> callback to integrate with the backend; no per-step opaque-payload handling in application code.</li>
+</ul>
+<p>The trade-off is reduced step-by-step control. If there are integration-specific reasons to stage <code>sdkInput</code> / <code>sdkOutput</code> through application logic between <code>canProvision</code> and <code>provision</code>, the Offline Provisioning SDK remains the appropriate choice.</p>
+<h2 id="flow-comparison">Flow comparison<a class="headerlink" href="#flow-comparison" title="Link to this section">&para;</a></h2>
+<p>The diagrams below visualise the two integrations end-to-end. The Sessions flow has one fewer numbered step and removes the SDK → app → backend OPC callback round-trip during <code>provision(...)</code>.</p>
+<h3 id="offline-provisioning-sdk-four-step-flow-with-opc-callback">Offline Provisioning SDK — four-step flow with OPC callback<a class="headerlink" href="#offline-provisioning-sdk-four-step-flow-with-opc-callback" title="Link to this section">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    box MOBILE DEVICE
+        participant APP
+        participant SDK
+    end
+
+    box SERVER SIDE
+        participant BACKEND
+        participant ADYEN
+    end
+
+    Note over APP,ADYEN: Step 1 — Get Activation Data
+    APP-&gt;&gt;BACKEND: Get Card Activation Data
+    activate BACKEND
+    BACKEND-&gt;&gt;ADYEN: GET /networkTokenActivationData
+    activate ADYEN
+    ADYEN--&gt;&gt;BACKEND: activationData
+    deactivate ADYEN
+    BACKEND--&gt;&gt;APP: activationData
+    deactivate BACKEND
+
+    Note over APP,SDK: Step 2 — Initialize Provisioning Client
+    APP-&gt;&gt;SDK: CardProvisioning.create(activationData)
+
+    Note over APP,SDK: Step 3 — Check if Can Add to Wallet
+    APP-&gt;&gt;SDK: canProvision()
+    SDK--&gt;&gt;APP: CanBeProvisioned
+
+    Note over APP,ADYEN: Step 4 — Provision the Card
+    APP-&gt;&gt;SDK: provision(activationData)
+    activate SDK
+
+    Note right of SDK: Callback initiated by SDK
+    SDK-&gt;&gt;APP: Request OPC Data
+    activate APP
+    APP-&gt;&gt;BACKEND: Fetch OPC Data
+    activate BACKEND
+    BACKEND-&gt;&gt;ADYEN: POST /networkTokenActivationData
+    ADYEN--&gt;&gt;BACKEND: opaqueCardData
+    BACKEND--&gt;&gt;APP: opaqueCardData
+    deactivate BACKEND
+    APP--&gt;&gt;SDK: opaqueCardData
+    deactivate APP
+
+    SDK--&gt;&gt;APP: ProvisionResult.Success
+    deactivate SDK</code></pre>
+<h3 id="session-based-provisioning-sdk-three-step-flow-with-no-per-call-backend-involvement">Session-based Provisioning SDK — three-step flow with no per-call backend involvement<a class="headerlink" href="#session-based-provisioning-sdk-three-step-flow-with-no-per-call-backend-involvement" title="Link to this section">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    box MOBILE DEVICE
+        participant APP
+        participant SDK
+    end
+
+    box SERVER SIDE
+        participant BACKEND
+        participant ADYEN
+    end
+
+    Note over APP,ADYEN: Step 1 — Get Session Token
+    APP-&gt;&gt;BACKEND: Request Session Token
+    activate BACKEND
+    BACKEND-&gt;&gt;ADYEN: Request Session Token
+    activate ADYEN
+    ADYEN--&gt;&gt;BACKEND: Return Session Token
+    deactivate ADYEN
+    BACKEND--&gt;&gt;APP: Return Session Token
+    deactivate BACKEND
+
+    Note over APP,SDK: Step 2 — Check if Can Add to Wallet
+    APP-&gt;&gt;SDK: canProvisionCard(paymentInstrumentId)
+    activate SDK
+    SDK--&gt;&gt;APP: CanProvisionResult.CanBeProvisioned
+    deactivate SDK
+
+    Note over APP,SDK: Step 3 — Provision the Card
+    APP-&gt;&gt;SDK: provisionCard(paymentInstrumentId, ...)
+    activate SDK
+    SDK--&gt;&gt;APP: ProvisionResult.Success
+    deactivate SDK</code></pre>
+<h2 id="api-mapping">API mapping<a class="headerlink" href="#api-mapping" title="Link to this section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Offline Provisioning SDK</th>
+<th>Session-based Provisioning SDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maven coordinate</td>
+<td><code>com.adyen.issuing.provisioning:provisioning-sdk</code></td>
+<td><code>com.adyen.issuing.provisioning:provisioning-sessions</code></td>
+</tr>
+<tr>
+<td>Primary type</td>
+<td><code>CardProvisioning</code> (one instance per card)</td>
+<td><code>ProvisioningSession</code> (one instance per card set)</td>
+</tr>
+<tr>
+<td>Factory</td>
+<td><code>CardProvisioning.create(sdkInput, activityProvider)</code></td>
+<td><code>ProvisioningSession.create(context, appCertInputStream, paymentInstrumentIds, activityProvider, sessionTokenProvider, environment = LIVE)</code></td>
+</tr>
+<tr>
+<td>Eligibility check</td>
+<td><code>canProvision(): CanProvisionResult</code></td>
+<td><code>canProvisionCard(paymentInstrumentId): CanProvisionResult</code></td>
+</tr>
+<tr>
+<td>Provision</td>
+<td><code>provision(cardDisplayName, cardAddress, opcProvider): ProvisionResult</code></td>
+<td><code>provisionCard(paymentInstrumentId, cardDisplayName, cardAddress): ProvisionResult</code></td>
+</tr>
+<tr>
+<td>Backend bridge</td>
+<td><code>OpcProvider</code> lambda fetches OPC per call</td>
+<td><code>sessionTokenProvider: suspend (Set&lt;String&gt;) -&gt; String</code> creates once per session</td>
+</tr>
+<tr>
+<td>Application certificate</td>
+<td>Not required</td>
+<td>Required (<code>appCertInputStream</code> or pre-parsed <code>X509Certificate</code>)</td>
+</tr>
+<tr>
+<td>Environment selector</td>
+<td>Not exposed</td>
+<td><code>ProvisioningEnvironment</code> (<code>LIVE</code>, <code>BETA</code>, <code>TEST</code>)</td>
+</tr>
+<tr>
+<td>Result types package</td>
+<td><code>com.adyen.issuing.mobile.provisioning.client.results.*</code></td>
+<td><code>com.adyen.issuing.mobile.provisioning.sessions.results.*</code></td>
+</tr>
+<tr>
+<td>Card address type</td>
+<td><code>com.adyen.issuing.mobile.provisioning.client.data.CardAddress</code></td>
+<td>Same type, re-used across both SDKs</td>
+</tr>
+<tr>
+<td>Activity provider</td>
+<td><code>() -&gt; Activity</code></td>
+<td>Same signature</td>
+</tr>
+<tr>
+<td>Experimental opt-in</td>
+<td><code>@AdyenExperimentalApi</code></td>
+<td>Same annotation</td>
+</tr>
+</tbody>
+</table>
+<p>The two SDKs use distinct <code>results</code> packages with different concrete variants, so any <code>when</code> expression that is exhaustive over the SDK's <code>CanProvisionResult</code> / <code>ProvisionResult</code> / <code>CardProvisioningCreateResult</code> branches will need to be updated to cover the Sessions counterparts. See <a href="#result-type-expansion">Result-type expansion</a> below.</p>
+<h2 id="backend-changes">Backend changes<a class="headerlink" href="#backend-changes" title="Link to this section">&para;</a></h2>
+<h3 id="what-goes-away">What goes away<a class="headerlink" href="#what-goes-away" title="Link to this section">&para;</a></h3>
+<p>The two <code>networkTokenActivationData</code> calls used by the direct SDK are no longer invoked from the client:</p>
+<ul>
+<li><code>GET .../paymentInstruments/{id}/networkTokenActivationData</code> — previously returned <code>sdkInput</code>.</li>
+<li><code>POST .../paymentInstruments/{id}/networkTokenActivationData</code> — previously returned the OPC payload in exchange for <code>sdkOutput</code>.</li>
+</ul>
+<p>Once the migration is complete and the SDK consumers are removed, the corresponding backend endpoints can be decommissioned (or repurposed for any non-SDK use cases).</p>
+<h3 id="what-replaces-them">What replaces them<a class="headerlink" href="#what-replaces-them" title="Link to this section">&para;</a></h3>
+<p>A single endpoint on your backend that creates an Adyen session token for the set of payment-instrument IDs the user is about to operate on. Its response — a base64-encoded session token issued by Adyen's session API — is what your <code>sessionTokenProvider</code> lambda returns to the SDK.</p>
+<p>The lambda signature is:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sessionTokenProvider</span><span class="p">:</span><span class="w"> </span><span class="n">suspend</span><span class="w"> </span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">String</span>
+</span></code></pre></div>
+<p>It receives the same <code>paymentInstrumentIds</code> set you passed to <code>ProvisioningSession.create(...)</code> and is expected to return the session token string.</p>
+<p>Your backend obtains the token by calling Adyen's session API:</p>
+<ul>
+<li><strong>Live</strong> — <code>POST https://authe-live.adyen.com/authe/api/v1/sessions</code></li>
+<li><strong>Test</strong> — <code>POST https://authe-test.adyen.com/authe/api/v1/sessions</code></li>
+</ul>
+<!-- TODO: confirm the response structure, and token lifetime with the Sessions backend team and link to the relevant Adyen Issuing API reference here. -->
+
+<h2 id="client-code-changes">Client code changes<a class="headerlink" href="#client-code-changes" title="Link to this section">&para;</a></h2>
+<p>The example app demonstrates both call sequences side-by-side; the snippets below summarise the differences.</p>
+<h3 id="before-offline-provisioning-sdk">Before — Offline Provisioning SDK<a class="headerlink" href="#before-offline-provisioning-sdk" title="Link to this section">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Backend call 1: GET networkTokenActivationData -&gt; sdkInput</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sdkInput</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdkBackend</span><span class="p">.</span><span class="na">requestCardActivation</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">).</span><span class="na">sdkInput</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">createResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardProvisioning</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">sdkInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdkInput</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">activityProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">hostingActivity</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">cardProvisioning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">createResult</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">CardProvisioningCreateResult</span><span class="p">.</span><span class="na">Success</span><span class="p">).</span><span class="na">cardProvisioning</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">cardProvisioning</span><span class="p">.</span><span class="na">canProvision</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CanBeProvisioned</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show Add to Wallet */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">AlreadyExistsInWallet</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* hide button */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">ApiError</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">Error</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">UnknownFailure</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show error */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provisionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cardProvisioning</span><span class="p">.</span><span class="na">provision</span><span class="p">(</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">cardAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardAddress</span><span class="p">(),</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="n">opcProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentId</span><span class="p">,</span><span class="w"> </span><span class="n">sdkOutput</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="c1">// Backend call 2: POST networkTokenActivationData with sdkOutput -&gt; OPC</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="n">sdkBackend</span><span class="p">.</span><span class="na">requestOpaquePaymentCardData</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">,</span><span class="w"> </span><span class="n">sdkOutput</span><span class="p">).</span><span class="na">sdkInput</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="after-session-based-provisioning-sdk">After — Session-based Provisioning SDK<a class="headerlink" href="#after-session-based-provisioning-sdk" title="Link to this section">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">createResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProvisioningSession</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">appCertInputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">openRawResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">raw</span><span class="p">.</span><span class="na">app_cert</span><span class="p">),</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setOf</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">),</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">activityProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">hostingActivity</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">sessionTokenProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="c1">// Single backend call: the endpoint requests a token from Adyen&#39;s session API</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">sessionsBackend</span><span class="p">.</span><span class="na">fetchToken</span><span class="p">(</span><span class="n">paymentInstrumentIds</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kd">val</span><span class="w"> </span><span class="nv">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">createResult</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ProvisioningSessionCreateResult</span><span class="p">.</span><span class="na">Success</span><span class="p">).</span><span class="na">session</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">session</span><span class="p">.</span><span class="na">canProvisionCard</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CanBeProvisioned</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show Add to Wallet */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">AlreadyExistsInWallet</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* hide button */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="c1">// ... see Result-type expansion below for the additional variants to handle</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provisionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">provisionCard</span><span class="p">(</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">paymentInstrumentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paymentInstrumentId</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="n">cardAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardAddress</span><span class="p">(),</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>The <code>CardAddress</code> import does not change — it is defined in the Offline Provisioning SDK's <code>client.data</code> package and re-used unchanged by the Session-based Provisioning SDK.</p>
+<h2 id="result-type-expansion">Result-type expansion<a class="headerlink" href="#result-type-expansion" title="Link to this section">&para;</a></h2>
+<p>The Session-based result types intentionally expose a wider failure surface than the Offline Provisioning SDK because operational concerns the Offline Provisioning SDK delegates to your backend (token-fetch errors, certificate validation, tamper detection, transport / serialization failures) become observable inside the SDK once it manages the session.</p>
+<p>Concrete additions to cover when updating exhaustive <code>when</code> expressions:</p>
+<p><strong><code>ProvisioningSessionCreateResult.Failure</code></strong> — replaces <code>CardProvisioningCreateResult.Failed</code>:</p>
+<ul>
+<li><code>ApplicationCertificateError</code> — the bytes you supplied could not be parsed as an X.509 certificate.</li>
+<li><code>Error(message: String?)</code> — generic creation failure with optional reason.</li>
+</ul>
+<p><code>GooglePayNotSupported</code> and <code>InvalidSdkInput</code> from the SDK no longer occur at session creation: <code>GooglePayNotSupported</code> moves to <code>CanProvisionResult.CannotBeProvisioned</code>, and <code>InvalidSdkInput</code> no longer exists because there is no opaque input payload.</p>
+<p><strong>Sessions <code>CanProvisionResult.CannotBeProvisioned</code></strong> — supersedes the SDK's variants:</p>
+<ul>
+<li>All four SDK variants (<code>AlreadyExistsInWallet</code>, <code>ApiError</code>, <code>Error</code>, <code>UnknownFailure</code>) plus a <code>GooglePayNotSupported</code> branch that previously surfaced at create-time.</li>
+<li>New: <code>DecryptError</code>, <code>EncryptError</code>, <code>HttpError</code>, <code>SdkCertificateError</code>, <code>InvalidApplicationCertificate</code>, <code>PaymentInstrumentNotAllowed</code>, <code>SerializationError</code>, <code>TokenProviderError</code>, <code>TamperError</code>.</li>
+</ul>
+<p><strong>Sessions <code>ProvisionResult.Failure</code></strong> — supersedes the SDK's variants:</p>
+<ul>
+<li>New: <code>AlreadyProvisioned</code>, <code>Canceled</code>, <code>DecryptError</code>, <code>EncryptError</code>, <code>Error</code>, <code>HttpError</code>, <code>SdkCertificateError</code>, <code>InvalidApplicationCertificate</code>, <code>PaymentInstrumentNotAllowed</code>, <code>ProvisioningInProgress</code>, <code>SerializationError</code>, <code>TokenProviderError</code>, <code>ProvisioningSdkFailure</code>, <code>TapAndPayApiFailure</code>, <code>TapAndPayNotAvailable</code>, <code>TamperError</code>.</li>
+</ul>
+<p>Most of these can be mapped to a small set of UI states for typical applications (retryable transport error, non-retryable validation error, terminal "card is already in wallet"), but the Kotlin compiler will require each branch to be addressed explicitly.</p>
+<h2 id="what-remains-unchanged">What remains unchanged<a class="headerlink" href="#what-remains-unchanged" title="Link to this section">&para;</a></h2>
+<ul>
+<li><strong>Google Push Provisioning API allowlisting.</strong> Both SDKs depend transitively on <code>com.google.android.gms:play-services-tapandpay</code> and the same allowlisting steps apply. See <a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a>.</li>
+<li><strong><code>CardAddress</code>.</strong> Same fields, same package, no migration required.</li>
+<li><strong><code>activityProvider: () -&gt; Activity</code>.</strong> The lambda is invoked in the same way; pass the host Activity as before.</li>
+<li><strong><code>@AdyenExperimentalApi</code>.</strong> Both SDKs require the same opt-in annotation at call sites.</li>
+<li><strong>Minimum Android API and compileSdk requirements.</strong> Unchanged at API 26 / compileSdk 35.</li>
+</ul>
+<h2 id="step-by-step-migration">Step-by-step migration<a class="headerlink" href="#step-by-step-migration" title="Link to this section">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Add the new dependency</strong> alongside the existing one so the migration can be shipped incrementally:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.adyen.issuing.provisioning:provisioning-sdk:0.5.0-docs-preview&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// existing</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.adyen.issuing.provisioning:provisioning-sessions:0.5.0-docs-preview&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// new</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Embed the application certificate.</strong> Place the certificate provided by Adyen in <code>res/raw/</code> (or another readable location) so it can be passed to <code>ProvisioningSession.create(...)</code> as an <code>InputStream</code>.</p>
+</li>
+<li>
+<p><strong>Implement the session-token backend endpoint</strong> that proxies to Adyen's session API and returns the issued token. Integrate it into the client behind a <code>sessionTokenProvider</code> lambda.</p>
+</li>
+<li>
+<p><strong>Introduce a new repository or use-case</strong> that encapsulates the Session-based flow without disturbing the existing Offline Provisioning SDK code path. The example app's <code>ProvisioningSessionsRepository</code> (alongside the existing <code>ProvisioningSdkRepository</code> implementing the same <code>ProvisioningRepository</code> interface) is the reference layout.</p>
+</li>
+<li>
+<p><strong>Switch call sites incrementally.</strong> A feature flag or runtime toggle (the example app uses a segmented button bound to a <code>ProvisioningMethod</code> enum) allows routing a percentage of traffic through the Session-based Provisioning SDK while leaving fallback to the Offline Provisioning SDK in place.</p>
+</li>
+<li>
+<p><strong>Update the error mapping</strong> to cover the expanded <code>CanProvisionResult</code> and <code>ProvisionResult</code> branches. Treat the new <code>*Error</code> variants conservatively — retry where transport-related; otherwise surface the failure and abort.</p>
+</li>
+<li>
+<p><strong>Decommission the old API surface</strong> once the Session-based Provisioning SDK is rolled out: remove the Offline Provisioning SDK dependency, delete the <code>OpcProvider</code> integration code, and retire the two <code>networkTokenActivationData</code> backend endpoints if no other consumers remain.</p>
+</li>
+</ol>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
+<ul>
+<li><a href="../../../provisioning-sdk/">Offline Provisioning SDK</a> — the SDK you are migrating from</li>
+<li><a href="../../essentials/getting-started/">Session-based Provisioning SDK — Getting Started</a> — fresh-integration guide</li>
+<li><a href="../../../example-app/">Example App</a> — runnable reference exercising both integrations from one screen</li>
+<li><a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a> — shared allowlisting prerequisite</li>
+<li><a href="https://github.com/Adyen/adyen-issuing-android/blob/main/provisioning/sessions/RELEASE_NOTES">Release Notes</a> — version history</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/search-highlight-clear.js"></script>
+      
+    
+  </body>
+</html>
