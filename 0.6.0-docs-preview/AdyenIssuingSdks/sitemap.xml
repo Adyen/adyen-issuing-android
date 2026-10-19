@@ -1,791 +1,791 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/additional-resources/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/additional-resources/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/google-push-provisioning-access/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/google-push-provisioning-access/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/troubleshooting/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/troubleshooting/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/releases/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/releases/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/can-provision/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/can-provision/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/provision/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/provision/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/-companion/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/-companion/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/-companion/create/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client/-card-provisioning/-companion/create/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.annotation/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.annotation/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.annotation/-adyen-experimental-api/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.annotation/-adyen-experimental-api/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/-card-address/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/-card-address/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/address-line1/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/address-line1/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/address-line2/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/address-line2/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/administrative-area/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/administrative-area/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/country-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/country-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/locality/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/locality/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/phone-number/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/phone-number/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/postal-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-card-address/postal-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-opc-provider/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-opc-provider/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-opc-provider/fetch-opc/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.data/-opc-provider/fetch-opc/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-can-be-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-can-be-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-already-exists-in-wallet/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-already-exists-in-wallet/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/-api-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/-api-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/status-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-api-error/status-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/throwable/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-error/throwable/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-unknown-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-can-provision-result/-cannot-be-provisioned/-unknown-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/-google-pay-not-supported/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/-google-pay-not-supported/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/-invalid-sdk-input/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-failed/-invalid-sdk-input/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/card-provisioning/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-card-provisioning-create-result/-success/card-provisioning/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-already-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-already-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-api-not-connected/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-api-not-connected/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-attestation-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-attestation-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-canceled/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-canceled/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-connection-suspended-during-call/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-connection-suspended-during-call/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-developer-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-developer-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-internal-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-internal-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-interrupted/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-interrupted/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-account/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-account/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/-invalid-sdk-input/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/-invalid-sdk-input/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/error-message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-sdk-input/error-message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-token-state/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-invalid-token-state/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-network-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-network-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-no-active-wallet/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-no-active-wallet/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/-opc-fetch-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/-opc-fetch-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/error-message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-opc-fetch-error/error-message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/-other/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/-other/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-other/error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-provisioning-in-progress/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-provisioning-in-progress/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-reconnection-timed-out/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-reconnection-timed-out/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-reconnection-timed-out-during-update/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-reconnection-timed-out-during-update/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-remote-exception/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-remote-exception/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-resolution-required/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-resolution-required/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-sign-in-required/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-sign-in-required/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-timeout/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-timeout/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-token-not-found/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-token-not-found/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unavailable/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unavailable/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/-unknown-status-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/-unknown-status-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/status-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-failure/-unknown-status-code/status-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/token-id/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/api/reference/com.adyen.issuing.mobile.provisioning.client.results/-provision-result/-success/token-id/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/essentials/getting-started/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/essentials/getting-started/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sdk/migration/from-pre-0.4/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sdk/migration/from-pre-0.4/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/releases/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/releases/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/entries/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/entries/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/value-of/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/value-of/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/values/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/values/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-b-e-t-a/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-b-e-t-a/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-l-i-v-e/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-l-i-v-e/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-t-e-s-t/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/-t-e-s-t/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/can-provision-card/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/can-provision-card/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/provision-card/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/provision-card/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/-companion/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/-companion/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/-companion/create/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session/-companion/create/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-can-be-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-can-be-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-already-exists-in-wallet/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-already-exists-in-wallet/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/-api-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/-api-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/status-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-api-error/status-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/-decrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/-decrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-decrypt-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/-encrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/-encrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-encrypt-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-google-pay-not-supported/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-google-pay-not-supported/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/-http-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/-http-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/error-message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/error-message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/http-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-http-error/http-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-invalid-application-certificate/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-invalid-application-certificate/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-payment-instrument-not-allowed/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-payment-instrument-not-allowed/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/-sdk-certificate-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/-sdk-certificate-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-sdk-certificate-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/-serialization-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/-serialization-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-serialization-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/-tamper-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/-tamper-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/tamper-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-tamper-error/tamper-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/-token-provider-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/-token-provider-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-token-provider-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-unknown-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/-cannot-be-provisioned/-unknown-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-already-provisioned/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-already-provisioned/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-canceled/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-canceled/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/-decrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/-decrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-decrypt-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/-encrypt-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/-encrypt-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-encrypt-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/-http-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/-http-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/http-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/http-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-http-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-invalid-application-certificate/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-invalid-application-certificate/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-payment-instrument-not-allowed/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-payment-instrument-not-allowed/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-in-progress/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-in-progress/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/-provisioning-sdk-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/-provisioning-sdk-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-provisioning-sdk-failure/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/-sdk-certificate-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/-sdk-certificate-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-sdk-certificate-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/-serialization-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/-serialization-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-serialization-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/-tamper-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/-tamper-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/tamper-code/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tamper-error/tamper-code/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/-tap-and-pay-api-failure/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/-tap-and-pay-api-failure/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-api-failure/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-not-available/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-tap-and-pay-not-available/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/-token-provider-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/-token-provider-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-failure/-token-provider-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/token-id/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provision-result/-success/token-id/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-application-certificate-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-application-certificate-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/-error/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/-error/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/message/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-failed/-error/message/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/-success/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/-success/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/session/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-session-create-result/-success/session/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/essentials/getting-started/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/essentials/getting-started/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/network-token-provisioning/provisioning-sessions/migration/from-provisioning-sdk/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/provisioning-sessions/migration/from-provisioning-sdk/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
-         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenGoogleWalletProvisioning/security/security-guide/</loc>
+         <loc>https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/security/security-guide/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
 </urlset>
