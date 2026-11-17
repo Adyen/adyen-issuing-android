@@ -124,6 +124,65 @@
     margin: 2rem 0;
 }
 
+/* Keep SDK comparison columns equally wide, with matching content rows. */
+.md-typeset .sdk-comparison table:not([class]) {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.md-typeset .sdk-comparison th,
+.md-typeset .sdk-comparison td {
+    width: 50%;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+/* Keep the recommendation close to the SDK titles. */
+.md-typeset .sdk-comparison thead th {
+    padding-bottom: 0.35rem;
+}
+
+/* Remove the rule below the SDK titles, above the recommendation row. */
+.md-typeset .sdk-comparison tbody tr:first-child td {
+    border-top: none;
+    padding-top: 0.35rem;
+}
+
+/* Keep the guide links visually connected to their descriptions. */
+.md-typeset .sdk-comparison tbody tr:last-child td {
+    border-top: none;
+}
+
+/* Central divider so the recommendation badge clearly belongs to one column only.
+   Higher specificity than the global table rule that removes vertical borders. */
+.md-typeset .sdk-comparison table:not([class]) th + th,
+.md-typeset .sdk-comparison table:not([class]) td + td {
+    border-left: 1px solid var(--md-default-fg-color--lightest, #e4e4e4);
+}
+
+/* Recommendation badge below the SDK title; allow wrapping on narrow screens. */
+.md-typeset .sdk-recommendation {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0.2rem 0.45rem;
+    border: 1px solid #b5ddc2;
+    border-radius: 0.3rem;
+    background-color: #e7f5ec;
+    color: #176b36;
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: normal;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .sdk-recommendation {
+    border-color: #376b48;
+    background-color: #173b26;
+    color: #a3e6b8;
+}
+
 /* Header shadow — closer to DocC's hairline rule than Material's default drop shadow */
 .md-header {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -236,54 +295,56 @@
     background-color: #7e7e7e;
 }
 
-/* -----------------------------------------------------------------------------
- * Card Reveal Sessions API sidebar badges
- * --------------------------------------------------------------------------- */
 
-/* Shared badge glyph styling for Card Reveal Sessions symbols */
-.md-nav__link[href*="/-card-session/"]::before,
-.md-nav__link[href*="/-card-session-environment/"]::before,
-.md-nav__link[href*="/-reveal-card-details-result/"]::before,
-.md-nav__link[href*="/-reveal-pin-result/"]::before,
-.md-nav__link[href*="/-change-pin-result/"]::before,
-.md-nav__link[href*="/-card-session-create-result/"]::before {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 1.15em;
-    height: 1.15em;
-    margin-right: 0.45em;
-    font-family: var(--md-code-font);
-    font-size: 0.7em;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    border-radius: 3px;
-    text-transform: none;
-    letter-spacing: 0;
-}
 
-/* Interfaces — purple "P" */
-.md-nav__link[href*="/-card-session/"]::before {
-    content: "P";
-    background-color: #9a54e0;
-}
 
-/* Sealed Interfaces — orange "E" */
-.md-nav__link[href*="/-card-session-environment/"]::before,
-.md-nav__link[href*="/-reveal-card-details-result/"]::before,
-.md-nav__link[href*="/-reveal-pin-result/"]::before,
-.md-nav__link[href*="/-change-pin-result/"]::before {
-    content: "E";
-    background-color: #e37d2a;
-}
 
-/* Sealed Classes — orange "E" */
-.md-nav__link[href*="/-card-session-create-result/"]::before {
-    content: "E";
-    background-color: #e37d2a;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------------------------------------------------------------------
  * DocC-style title hero panel

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Android SDKs for Adyen's card issuing product suite — Google Wallet provisioning (direct and session-based) and card reveal.">
+        <meta name="description" content="Android SDKs for Adyen's card issuing product suite — Google Wallet provisioning (direct and session-based).">
       
       
       
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrating-from-the-card-provisioning-sdk-to-the-card-provisioning-sessions-sdk" class="md-skip">
+        <a href="#migrating-from-card-provisioning-offline-to-card-provisioning-sessions" class="md-skip">
           Skip to content
         </a>
       
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    Network Token Provisioning
+    Card Provisioning
   
 
     
@@ -341,7 +341,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Network Token Provisioning
+    Card Provisioning
   
 
           </label>
@@ -410,6 +410,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../example-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../troubleshooting/" class="md-nav__link">
         
   
@@ -450,17 +478,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Card Provisioning Sessions SDK
+    Card Provisioning Sessions
   
 
     
@@ -471,12 +499,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Card Provisioning Sessions SDK
+    Card Provisioning Sessions
   
 
           </label>
@@ -628,10 +656,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#card-provisioning-sdk-four-step-flow-with-opc-callback" class="md-nav__link">
+  <a href="#card-provisioning-offline-four-step-flow-with-opc-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Card Provisioning SDK — four-step flow with OPC callback
+        Card Provisioning (Offline) — four-step flow with OPC callback
       
     </span>
   </a>
@@ -639,10 +667,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#card-provisioning-sessions-sdk-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
+  <a href="#card-provisioning-sessions-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Card Provisioning Sessions SDK — three-step flow with no per-call backend involvement
+        Card Provisioning Sessions — three-step flow with no per-call backend involvement
       
     </span>
   </a>
@@ -717,10 +745,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#before-card-provisioning-sdk" class="md-nav__link">
+  <a href="#before-card-provisioning-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before — Card Provisioning SDK
+        Before — Card Provisioning (Offline)
       
     </span>
   </a>
@@ -728,10 +756,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#after-card-provisioning-sessions-sdk" class="md-nav__link">
+  <a href="#after-card-provisioning-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        After — Card Provisioning Sessions SDK
+        After — Card Provisioning Sessions
       
     </span>
   </a>
@@ -744,13 +772,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-type-expansion" class="md-nav__link">
+  <a href="#result-type-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result-type expansion
+        Result-type changes
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Result-type changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace-ids-and-http-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace IDs and HTTP errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -843,10 +888,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
             
   
   
@@ -864,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -922,10 +967,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_2" id="__nav_2_4_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_2" id="__nav_2_5_5_2_label" tabindex="0">
             
   
   
@@ -943,8 +988,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -982,65 +1027,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_4_5_3" id="__nav_2_4_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Enum Classes
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Enum Classes
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -1048,14 +1034,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/" class="md-nav__link">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-token-provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ProvisioningEnvironment
+    SessionTokenProvider
   
 
     
@@ -1096,10 +1082,125 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_4" id="__nav_2_4_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_3" id="__nav_2_5_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningSessionConfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SessionToken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_4" id="__nav_2_5_5_4_label" tabindex="0">
             
   
   
@@ -1117,8 +1218,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1135,14 +1236,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/" class="md-nav__link">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-environment/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    CanProvisionResult
+    SessionEnvironment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningState
   
 
     
@@ -1211,10 +1340,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_5" id="__nav_2_4_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_5" id="__nav_2_5_5_5_label" tabindex="0">
             
   
   
@@ -1232,8 +1361,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1342,17 +1471,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Card Provisioning SDK
+    Card Provisioning (Offline)
   
 
     
@@ -1363,12 +1492,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Card Provisioning SDK
+    Card Provisioning (Offline)
   
 
           </label>
@@ -1505,10 +1634,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
             
   
   
@@ -1526,8 +1655,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1584,10 +1713,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_2" id="__nav_2_5_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_2" id="__nav_2_6_5_2_label" tabindex="0">
             
   
   
@@ -1605,8 +1734,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1699,10 +1828,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_3" id="__nav_2_5_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_3" id="__nav_2_6_5_3_label" tabindex="0">
             
   
   
@@ -1720,8 +1849,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1786,10 +1915,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_4" id="__nav_2_5_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_4" id="__nav_2_6_5_4_label" tabindex="0">
             
   
   
@@ -1807,8 +1936,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1929,10 +2058,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_5" id="__nav_2_5_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_5" id="__nav_2_6_5_5_label" tabindex="0">
             
   
   
@@ -1950,8 +2079,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2152,10 +2281,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#card-provisioning-sdk-four-step-flow-with-opc-callback" class="md-nav__link">
+  <a href="#card-provisioning-offline-four-step-flow-with-opc-callback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Card Provisioning SDK — four-step flow with OPC callback
+        Card Provisioning (Offline) — four-step flow with OPC callback
       
     </span>
   </a>
@@ -2163,10 +2292,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#card-provisioning-sessions-sdk-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
+  <a href="#card-provisioning-sessions-three-step-flow-with-no-per-call-backend-involvement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Card Provisioning Sessions SDK — three-step flow with no per-call backend involvement
+        Card Provisioning Sessions — three-step flow with no per-call backend involvement
       
     </span>
   </a>
@@ -2241,10 +2370,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#before-card-provisioning-sdk" class="md-nav__link">
+  <a href="#before-card-provisioning-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before — Card Provisioning SDK
+        Before — Card Provisioning (Offline)
       
     </span>
   </a>
@@ -2252,10 +2381,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#after-card-provisioning-sessions-sdk" class="md-nav__link">
+  <a href="#after-card-provisioning-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        After — Card Provisioning Sessions SDK
+        After — Card Provisioning Sessions
       
     </span>
   </a>
@@ -2268,13 +2397,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-type-expansion" class="md-nav__link">
+  <a href="#result-type-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result-type expansion
+        Result-type changes
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Result-type changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace-ids-and-http-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace IDs and HTTP errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2331,24 +2477,28 @@
   
 
 
-<h1 id="migrating-from-the-card-provisioning-sdk-to-the-card-provisioning-sessions-sdk">Migrating from the Card Provisioning SDK to the Card Provisioning Sessions SDK<a class="headerlink" href="#migrating-from-the-card-provisioning-sdk-to-the-card-provisioning-sessions-sdk" title="Link to this section">&para;</a></h1>
-<p>Guidance for moving an existing integration from the <a href="../../../provisioning-sdk/">Card Provisioning SDK</a> to the <a href="../../">Card Provisioning Sessions SDK</a>.</p>
+<p><a id="migrating-from-the-card-provisioning-sdk-to-the-card-provisioning-sessions-sdk"></a></p>
+<p><a id="migrating-from-card-provisioning-offline-to-the-card-provisioning-sessions-sdk"></a></p>
+<h1 id="migrating-from-card-provisioning-offline-to-card-provisioning-sessions">Migrating from Card Provisioning (Offline) to Card Provisioning Sessions<a class="headerlink" href="#migrating-from-card-provisioning-offline-to-card-provisioning-sessions" title="Link to this section">&para;</a></h1>
+<p>Guidance for moving an existing integration from the <a href="../../../provisioning-sdk/">offline provisioning SDK</a> to the <a href="../../">Card Provisioning Sessions SDK</a>.</p>
+<p>The <a href="../../../example-app/">example app</a> contains both integrations side-by-side under <code>provisioningsdk/</code> and <code>provisioningsessions/</code>, sharing a single <code>ProvisioningRepository</code> interface — a useful concrete reference for the diff described below.</p>
 <div class="admonition tip">
-<p class="admonition-title">Coming from a <code>&lt; 0.4.0</code> Card Provisioning SDK?</p>
-<p>You don't need to do the <a href="../../../provisioning-sdk/migration/from-pre-0.4/">pre-0.4 migration</a> first. The "Before" snippets on this page show the post-<code>0.4.0</code> Card Provisioning SDK API so the diff to the Card Provisioning Sessions SDK is small, but if your existing integration is on <code>&lt; 0.4.0</code> you can replace it with the Session-based flow directly — none of the pre-<code>0.4.0</code> <code>createSdkOutput()</code> / manual OPC orchestration carries over either way. Use the <a href="../../essentials/getting-started/">Card Provisioning Sessions SDK — Getting Started</a> as your primary reference and treat the "Before" snippets here as illustrative of what the Card Provisioning SDK call site looks like, not as a prerequisite your code must already match.</p>
+<p class="admonition-title">Coming from a <code>&lt; 0.4.0</code> Card Provisioning (Offline)?</p>
+<p>You don't need to do the <a href="../../../provisioning-sdk/migration/from-pre-0.4/">pre-0.4 migration</a> first. The "Before" snippets on this page show the offline provisioning SDK API from <code>0.4.0</code> onward so the diff to the Card Provisioning Sessions SDK is small, but if your existing integration is on <code>&lt; 0.4.0</code> you can replace it with the Session-based flow directly — none of the pre-<code>0.4.0</code> <code>createSdkOutput()</code> / manual OPC orchestration carries over either way. Use the <a href="../../essentials/getting-started/">getting started guide for the Card Provisioning Sessions SDK</a> as your primary reference and treat the "Before" snippets here as illustrative of what an offline provisioning SDK call site looks like, not as a prerequisite your code must already match.</p>
 </div>
 <h2 id="why-migrate">Why migrate<a class="headerlink" href="#why-migrate" title="Link to this section">&para;</a></h2>
-<p>Session-based provisioning consolidates several integration concerns that the Card Provisioning SDK delegates to the backend:</p>
+<p>Session-based provisioning consolidates several integration concerns that the offline provisioning SDK delegates to the backend:</p>
 <ul>
 <li><strong>Smaller backend surface area.</strong> A single session-token endpoint replaces the two-leg <code>networkTokenActivationData</code> exchange (<code>GET</code> for <code>sdkInput</code>, <code>POST</code> with <code>sdkOutput</code> for OPC). Once the session token is issued, the SDK handles the remainder of the provisioning protocol with Adyen internally.</li>
 <li><strong>Multi-card sessions.</strong> A single <code>ProvisioningSession</code> covers a <code>Set&lt;String&gt;</code> of payment-instrument IDs, so flows that present several cards at once (e.g. a wallet management screen) incur the session-creation cost only once.</li>
 <li><strong>Tamper-detection signals.</strong> The session pipeline surfaces device-tamper outcomes alongside the standard provisioning results, providing an integrated signal in client error handling rather than a separate workflow.</li>
 <li><strong>Simpler client lifecycle.</strong> No <code>OpcProvider</code> callback to integrate with the backend; no per-step opaque-payload handling in application code.</li>
 </ul>
-<p>The trade-off is reduced step-by-step control. If there are integration-specific reasons to stage <code>sdkInput</code> / <code>sdkOutput</code> through application logic between <code>canProvision</code> and <code>provision</code>, the Card Provisioning SDK remains the appropriate choice.</p>
+<p>The trade-off is reduced step-by-step control. If there are integration-specific reasons to stage <code>sdkInput</code> / <code>sdkOutput</code> through application logic between <code>canProvision</code> and <code>provision</code>, the offline provisioning SDK remains the appropriate choice.</p>
 <h2 id="flow-comparison">Flow comparison<a class="headerlink" href="#flow-comparison" title="Link to this section">&para;</a></h2>
-<p>The diagrams below visualise the two integrations end-to-end. The Sessions flow has one fewer numbered step and removes the SDK → app → backend OPC callback round-trip during <code>provision(...)</code>.</p>
-<h3 id="card-provisioning-sdk-four-step-flow-with-opc-callback">Card Provisioning SDK — four-step flow with OPC callback<a class="headerlink" href="#card-provisioning-sdk-four-step-flow-with-opc-callback" title="Link to this section">&para;</a></h3>
+<p>The diagrams below compare the two integrations. With Sessions, your backend provides a session token and the SDK handles the remaining communication with Adyen. Your app no longer needs an OPC callback during provisioning.</p>
+<p><a id="card-provisioning-sdk-four-step-flow-with-opc-callback"></a></p>
+<h3 id="card-provisioning-offline-four-step-flow-with-opc-callback">Card Provisioning (Offline) — four-step flow with OPC callback<a class="headerlink" href="#card-provisioning-offline-four-step-flow-with-opc-callback" title="Link to this section">&para;</a></h3>
 <pre class="mermaid"><code>sequenceDiagram
     box MOBILE DEVICE
         participant APP
@@ -2365,20 +2515,20 @@
     activate BACKEND
     BACKEND-&gt;&gt;ADYEN: GET /networkTokenActivationData
     activate ADYEN
-    ADYEN--&gt;&gt;BACKEND: activationData
+    ADYEN--&gt;&gt;BACKEND: sdkInput
     deactivate ADYEN
-    BACKEND--&gt;&gt;APP: activationData
+    BACKEND--&gt;&gt;APP: sdkInput
     deactivate BACKEND
 
     Note over APP,SDK: Step 2 — Initialize Provisioning Client
-    APP-&gt;&gt;SDK: CardProvisioning.create(activationData)
+    APP-&gt;&gt;SDK: CardProvisioning.create(sdkInput)
 
     Note over APP,SDK: Step 3 — Check if Can Add to Wallet
     APP-&gt;&gt;SDK: canProvision()
     SDK--&gt;&gt;APP: CanBeProvisioned
 
     Note over APP,ADYEN: Step 4 — Provision the Card
-    APP-&gt;&gt;SDK: provision(activationData)
+    APP-&gt;&gt;SDK: provision(card details, opcProvider)
     activate SDK
 
     Note right of SDK: Callback initiated by SDK
@@ -2395,7 +2545,8 @@
 
     SDK--&gt;&gt;APP: ProvisionResult.Success
     deactivate SDK</code></pre>
-<h3 id="card-provisioning-sessions-sdk-three-step-flow-with-no-per-call-backend-involvement">Card Provisioning Sessions SDK — three-step flow with no per-call backend involvement<a class="headerlink" href="#card-provisioning-sessions-sdk-three-step-flow-with-no-per-call-backend-involvement" title="Link to this section">&para;</a></h3>
+<p><a id="card-provisioning-sessions-sdk-three-step-flow-with-no-per-call-backend-involvement"></a></p>
+<h3 id="card-provisioning-sessions-three-step-flow-with-no-per-call-backend-involvement">Card Provisioning Sessions — three-step flow with no per-call backend involvement<a class="headerlink" href="#card-provisioning-sessions-three-step-flow-with-no-per-call-backend-involvement" title="Link to this section">&para;</a></h3>
 <pre class="mermaid"><code>sequenceDiagram
     box MOBILE DEVICE
         participant APP
@@ -2417,10 +2568,10 @@
     BACKEND--&gt;&gt;APP: Return Session Token
     deactivate BACKEND
 
-    Note over APP,SDK: Step 2 — Check if Can Add to Wallet
-    APP-&gt;&gt;SDK: canProvisionCard(paymentInstrumentId)
+    Note over APP,SDK: Step 2 — Check Provisioning State
+    APP-&gt;&gt;SDK: provisioningState(paymentInstrumentId)
     activate SDK
-    SDK--&gt;&gt;APP: CanProvisionResult.CanBeProvisioned
+    SDK--&gt;&gt;APP: ProvisioningState.CanProvision
     deactivate SDK
 
     Note over APP,SDK: Step 3 — Provision the Card
@@ -2433,8 +2584,8 @@
 <thead>
 <tr>
 <th>Concern</th>
-<th>Card Provisioning SDK</th>
-<th>Card Provisioning Sessions SDK</th>
+<th>Card Provisioning (Offline)</th>
+<th>Card Provisioning Sessions</th>
 </tr>
 </thead>
 <tbody>
@@ -2451,12 +2602,17 @@
 <tr>
 <td>Factory</td>
 <td><code>CardProvisioning.create(sdkInput, activityProvider)</code></td>
-<td><code>ProvisioningSession.create(context, appCertInputStream, paymentInstrumentIds, activityProvider, sessionTokenProvider, environment = LIVE)</code></td>
+<td><code>ProvisioningSession.create(context, configuration, activityProvider, tokenProvider)</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><em>(none)</em></td>
+<td><code>ProvisioningSessionConfiguration(appCertificate: ByteArray, paymentInstrumentIds, environment = SessionEnvironment.Live)</code></td>
 </tr>
 <tr>
 <td>Eligibility check</td>
 <td><code>canProvision(): CanProvisionResult</code></td>
-<td><code>canProvisionCard(paymentInstrumentId): CanProvisionResult</code></td>
+<td><code>provisioningState(paymentInstrumentId): ProvisioningState</code></td>
 </tr>
 <tr>
 <td>Provision</td>
@@ -2466,17 +2622,17 @@
 <tr>
 <td>Backend bridge</td>
 <td><code>OpcProvider</code> lambda fetches OPC per call</td>
-<td><code>sessionTokenProvider: suspend (Set&lt;String&gt;) -&gt; String</code> creates once per session</td>
+<td><code>SessionTokenProvider</code> returns a session token wrapped in <code>SessionToken</code></td>
 </tr>
 <tr>
 <td>Application certificate</td>
 <td>Not required</td>
-<td>Required (<code>appCertInputStream</code> or pre-parsed <code>X509Certificate</code>)</td>
+<td>Required — DER-encoded bytes in <code>ProvisioningSessionConfiguration</code></td>
 </tr>
 <tr>
 <td>Environment selector</td>
 <td>Not exposed</td>
-<td><code>ProvisioningEnvironment</code> (<code>LIVE</code>, <code>BETA</code>, <code>TEST</code>)</td>
+<td><code>SessionEnvironment</code> (<code>Live</code> or <code>Test</code>)</td>
 </tr>
 <tr>
 <td>Result types package</td>
@@ -2500,7 +2656,7 @@
 </tr>
 </tbody>
 </table>
-<p>The two SDKs use distinct <code>results</code> packages with different concrete variants, so any <code>when</code> expression that is exhaustive over the SDK's <code>CanProvisionResult</code> / <code>ProvisionResult</code> / <code>CardProvisioningCreateResult</code> branches will need to be updated to cover the Sessions counterparts. See <a href="#result-type-expansion">Result-type expansion</a> below.</p>
+<p>The two SDKs use distinct <code>results</code> packages with different concrete variants, so any <code>when</code> expression that is exhaustive over the SDK's <code>CanProvisionResult</code> / <code>ProvisionResult</code> / <code>CardProvisioningCreateResult</code> branches will need to be updated to cover the Sessions counterparts (<code>ProvisioningState</code>, <code>ProvisionResult</code>, <code>ProvisioningSessionCreateResult</code>). See <a href="#result-type-changes">Result-type changes</a> below.</p>
 <h2 id="backend-changes">Backend changes<a class="headerlink" href="#backend-changes" title="Link to this section">&para;</a></h2>
 <h3 id="what-goes-away">What goes away<a class="headerlink" href="#what-goes-away" title="Link to this section">&para;</a></h3>
 <p>The two <code>networkTokenActivationData</code> calls used by the direct SDK are no longer invoked from the client:</p>
@@ -2508,13 +2664,16 @@
 <li><code>GET .../paymentInstruments/{id}/networkTokenActivationData</code> — previously returned <code>sdkInput</code>.</li>
 <li><code>POST .../paymentInstruments/{id}/networkTokenActivationData</code> — previously returned the OPC payload in exchange for <code>sdkOutput</code>.</li>
 </ul>
-<p>Once the migration is complete and the SDK consumers are removed, the corresponding backend endpoints can be decommissioned (or repurposed for any non-SDK use cases).</p>
+<p>Once no consumers of the offline provisioning SDK remain, the corresponding backend endpoints can be decommissioned.</p>
 <h3 id="what-replaces-them">What replaces them<a class="headerlink" href="#what-replaces-them" title="Link to this section">&para;</a></h3>
-<p>A single endpoint on your backend that creates an Adyen session token for the set of payment-instrument IDs the user is about to operate on. Its response — a base64-encoded session token issued by Adyen's session API — is what your <code>sessionTokenProvider</code> lambda returns to the SDK.</p>
-<p>The lambda signature is:</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sessionTokenProvider</span><span class="p">:</span><span class="w"> </span><span class="n">suspend</span><span class="w"> </span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">String</span>
+<p>A single endpoint on your backend that creates an Adyen session token for the set of payment-instrument IDs the user is about to operate on. Its response — the session token issued by Adyen's session API — is what your <code>SessionTokenProvider</code> returns to the SDK, wrapped in the SDK's opaque <code>SessionToken</code> type.</p>
+<p>The provider is a <code>fun interface</code>, so a lambda works:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tokenProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Single backend call: the endpoint requests a token from Adyen's session API</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">SessionToken</span><span class="p">(</span><span class="n">sessionsBackend</span><span class="p">.</span><span class="na">fetchToken</span><span class="p">(</span><span class="n">paymentInstrumentIds</span><span class="p">))</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>It receives the same <code>paymentInstrumentIds</code> set you passed to <code>ProvisioningSession.create(...)</code> and is expected to return the session token string.</p>
+<p>It receives the same <code>paymentInstrumentIds</code> set you passed in <code>ProvisioningSessionConfiguration</code> and must return the session token wrapped in a <code>SessionToken</code>. The token must carry the <strong>Network Token: Create</strong> role and cover the session's payment instruments; the SDK validates these claims locally before use.</p>
 <p>Your backend obtains the token by calling Adyen's session API:</p>
 <ul>
 <li><strong>Live</strong> — <code>POST https://authe-live.adyen.com/authe/api/v1/sessions</code></li>
@@ -2526,11 +2685,12 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SESSION_TOKEN..."</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>The <code>token</code> is the value your <code>sessionTokenProvider</code> lambda returns to the SDK; the <code>id</code> is informational and can help with debugging on the backend side. Session tokens are single-use — request a fresh token each time the SDK invokes your <code>sessionTokenProvider</code> (once per provisioning session), and do not cache or reuse them.</p>
+<p>The <code>token</code> is the value your <code>tokenProvider</code> lambda returns to the SDK; the <code>id</code> is informational and can help with debugging on the backend side. Request a fresh token each time the SDK invokes your <code>tokenProvider</code>; do not cache or reuse tokens. If the provider throws, the SDK retries token retrieval up to two times (three invocations in total). A token that returns successfully but fails local validation is not retried. Do not assume the provider runs only once per session or operation.</p>
 <p>For the full request and response contract, see the <a href="https://docs.adyen.com/api-explorer/sessionauthentication/latest/post/sessions#responses-200-token">session authentication API reference</a>.</p>
 <h2 id="client-code-changes">Client code changes<a class="headerlink" href="#client-code-changes" title="Link to this section">&para;</a></h2>
 <p>The example app demonstrates both call sequences side-by-side; the snippets below summarise the differences.</p>
-<h3 id="before-card-provisioning-sdk">Before — Card Provisioning SDK<a class="headerlink" href="#before-card-provisioning-sdk" title="Link to this section">&para;</a></h3>
+<p><a id="before-card-provisioning-sdk"></a></p>
+<h3 id="before-card-provisioning-offline">Before — Card Provisioning (Offline)<a class="headerlink" href="#before-card-provisioning-offline" title="Link to this section">&para;</a></h3>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Backend call 1: GET networkTokenActivationData -&gt; sdkInput</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sdkInput</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdkBackend</span><span class="p">.</span><span class="na">requestCardActivation</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">).</span><span class="na">sdkInput</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
@@ -2549,7 +2709,7 @@
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
 </span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provisionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cardProvisioning</span><span class="p">.</span><span class="na">provision</span><span class="p">(</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">,</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Adyen Business Card"</span><span class="p">,</span>
 </span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">cardAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardAddress</span><span class="p">(),</span>
 </span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="n">opcProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentId</span><span class="p">,</span><span class="w"> </span><span class="n">sdkOutput</span><span class="w"> </span><span class="o">-&gt;</span>
 </span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="c1">// Backend call 2: POST networkTokenActivationData with sdkOutput -&gt; card data</span>
@@ -2557,101 +2717,240 @@
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="after-card-provisioning-sessions-sdk">After — Card Provisioning Sessions SDK<a class="headerlink" href="#after-card-provisioning-sessions-sdk" title="Link to this section">&para;</a></h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">createResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProvisioningSession</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">appCertInputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">openRawResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">raw</span><span class="p">.</span><span class="na">app_cert</span><span class="p">),</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setOf</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">),</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">activityProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">hostingActivity</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">sessionTokenProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">-&gt;</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="c1">// Single backend call: the endpoint requests a token from Adyen's session API</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">sessionsBackend</span><span class="p">.</span><span class="na">fetchToken</span><span class="p">(</span><span class="n">paymentInstrumentIds</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="c1">// The SDK environment must match the token endpoint the backend calls:</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// TEST pairs with https://test.adyen.com, LIVE with https://authe-live.adyen.com.</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProvisioningEnvironment</span><span class="p">.</span><span class="na">TEST</span><span class="p">,</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">)</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="kd">val</span><span class="w"> </span><span class="nv">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">createResult</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ProvisioningSessionCreateResult</span><span class="p">.</span><span class="na">Success</span><span class="p">).</span><span class="na">session</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">session</span><span class="p">.</span><span class="na">canProvisionCard</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CanBeProvisioned</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show Add to Wallet */</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">CanProvisionResult</span><span class="p">.</span><span class="na">CannotBeProvisioned</span><span class="p">.</span><span class="na">AlreadyExistsInWallet</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* hide button */</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="c1">// ... see Result-type expansion below for the additional variants to handle</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
+<p><a id="after-card-provisioning-sessions-sdk"></a></p>
+<h3 id="after-card-provisioning-sessions">After — Card Provisioning Sessions<a class="headerlink" href="#after-card-provisioning-sessions" title="Link to this section">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@file</span><span class="p">:</span><span class="n">OptIn</span><span class="p">(</span><span class="n">AdyenExperimentalApi</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">com.adyen.issuing.mobile.provisioning.client.annotation.AdyenExperimentalApi</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">createResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProvisioningSession</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ProvisioningSessionConfiguration</span><span class="p">(</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">appCertificate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">appCertificate</span><span class="p">,</span><span class="w"> </span><span class="c1">// DER-encoded bytes of the .cer from Adyen</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setOf</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">),</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="c1">// The SDK environment must match the token endpoint the backend calls:</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="c1">// Live pairs with https://authe-live.adyen.com, Test with https://test.adyen.com.</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="n">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SessionEnvironment</span><span class="p">.</span><span class="na">Live</span><span class="w">   </span><span class="c1">// default</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">activityProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">hostingActivity</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">tokenProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">paymentInstrumentIds</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="c1">// Single backend call: the endpoint requests a token from Adyen's session API</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="n">SessionToken</span><span class="p">(</span><span class="n">sessionsBackend</span><span class="p">.</span><span class="na">fetchToken</span><span class="p">(</span><span class="n">paymentInstrumentIds</span><span class="p">))</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">)</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="kd">val</span><span class="w"> </span><span class="nv">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">createResult</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ProvisioningSessionCreateResult</span><span class="p">.</span><span class="na">Success</span><span class="p">).</span><span class="na">session</span>
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provisionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">provisionCard</span><span class="p">(</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="n">paymentInstrumentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paymentInstrumentId</span><span class="p">,</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">,</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="n">cardAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardAddress</span><span class="p">(),</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">session</span><span class="p">.</span><span class="na">provisioningState</span><span class="p">(</span><span class="n">paymentInstrumentId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="n">ProvisioningState</span><span class="p">.</span><span class="na">CanProvision</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show Add to Wallet */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="n">ProvisioningState</span><span class="p">.</span><span class="na">Provisioned</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* already in wallet — hide button */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="c1">// ... see Result-type changes below for the CannotProvision variants to handle</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="k">is</span><span class="w"> </span><span class="n">ProvisioningState</span><span class="p">.</span><span class="na">CannotProvision</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* show reason */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="p">}</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provisionResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">provisionCard</span><span class="p">(</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="n">paymentInstrumentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paymentInstrumentId</span><span class="p">,</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="n">cardDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Adyen Business Card"</span><span class="p">,</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="n">cardAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CardAddress</span><span class="p">(),</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="p">)</span>
 </span></code></pre></div>
-<p>The <code>CardAddress</code> import does not change — it is defined in the Card Provisioning SDK's <code>client.data</code> package and re-used unchanged by the Card Provisioning Sessions SDK.</p>
-<h2 id="result-type-expansion">Result-type expansion<a class="headerlink" href="#result-type-expansion" title="Link to this section">&para;</a></h2>
-<p>The Session-based result types intentionally expose a wider failure surface than the Card Provisioning SDK because operational concerns the Card Provisioning SDK delegates to your backend (token-fetch errors, certificate validation, tamper detection, transport / serialization failures) become observable inside the SDK once it manages the session.</p>
-<p>Concrete additions to cover when updating exhaustive <code>when</code> expressions:</p>
-<p><strong><code>ProvisioningSessionCreateResult.Failed</code></strong> — replaces <code>CardProvisioningCreateResult.Failed</code>:</p>
+<p>The <code>CardAddress</code> import does not change — it is defined in the offline provisioning SDK's <code>client.data</code> package and re-used unchanged by the Card Provisioning Sessions SDK.</p>
+<h2 id="result-type-changes">Result-type changes<a class="headerlink" href="#result-type-changes" title="Link to this section">&para;</a></h2>
+<p>The Session-based result types intentionally expose a different, more focused failure surface than the offline provisioning SDK because operational concerns the offline provisioning SDK delegates to your backend (token retrieval, session establishment, activation-data handling, tamper detection) become observable inside the SDK once it manages the session.</p>
+<p><strong><code>ProvisioningSessionCreateResult</code></strong> — replaces <code>CardProvisioningCreateResult</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Card Provisioning (Offline)</th>
+<th>Card Provisioning Sessions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Success(cardProvisioning)</code></td>
+<td><code>Success(session)</code></td>
+</tr>
+<tr>
+<td><code>Failed.GooglePayNotSupported</code></td>
+<td>No counterpart at creation — wallet support now surfaces as <code>ProvisioningState.CannotProvision.WalletNotSupported</code> or <code>ProvisionResult.Failure.TapAndPayNotAvailable</code></td>
+</tr>
+<tr>
+<td><code>Failed.InvalidSdkInput</code></td>
+<td>No counterpart — there is no opaque <code>sdkInput</code> payload anymore</td>
+</tr>
+<tr>
+<td><em>(none)</em></td>
+<td><code>Failure.ApplicationCertificateError</code> — the <code>appCertificate</code> bytes could not be parsed as X.509</td>
+</tr>
+<tr>
+<td><em>(none)</em></td>
+<td><code>Failure.Error(message: String?)</code> — any other creation failure with optional reason</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ProvisioningState</code></strong> — replaces <code>CanProvisionResult</code> for the eligibility check:</p>
+<table>
+<thead>
+<tr>
+<th>Card Provisioning (Offline)</th>
+<th>Card Provisioning Sessions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CanBeProvisioned</code></td>
+<td><code>CanProvision</code></td>
+</tr>
+<tr>
+<td><code>CannotBeProvisioned.AlreadyExistsInWallet</code></td>
+<td><code>Provisioned</code> — a positive state rather than a failure: there is nothing left to do for this card</td>
+</tr>
+<tr>
+<td><code>CannotBeProvisioned.ApiError(statusCode)</code></td>
+<td><code>CannotProvision.ProvisioningFailed(message)</code></td>
+</tr>
+<tr>
+<td><code>CannotBeProvisioned.Error(throwable)</code></td>
+<td><code>CannotProvision.ProvisioningFailed(message)</code></td>
+</tr>
+<tr>
+<td><code>CannotBeProvisioned.UnknownFailure</code></td>
+<td><code>CannotProvision.ProvisioningFailed(message)</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.CouldNotEstablishSession(message, traceId?)</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.SessionTokenRetrievalFailed(message)</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.ActivationDataUnavailable(message, traceId?)</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.HttpError</code> — sealed: <code>Authentication(traceId, message?)</code> for 401/403, <code>Validation(traceId, message?)</code> for 422, <code>Server</code> for 500 and other unexpected codes</td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.WalletNotSupported</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.PaymentInstrumentNotAllowed</code></td>
+</tr>
+<tr>
+<td><em>(new)</em></td>
+<td><code>CannotProvision.TamperError(tamperCode)</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sessions <code>ProvisionResult.Failure</code></strong> — supersedes the SDK's failure set:</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PaymentInstrumentNotAllowed</code></td>
+<td>The id is not in the session's set</td>
+</tr>
+<tr>
+<td><code>AlreadyProvisioned</code></td>
+<td>Card is already in the wallet</td>
+</tr>
+<tr>
+<td><code>ProvisioningCancelled</code></td>
+<td>User cancelled Google's provisioning flow</td>
+</tr>
+<tr>
+<td><code>ProvisioningAlreadyInProgress</code></td>
+<td>Another provisioning or wallet-creation operation is running in the application process, possibly for a different card; wait for it to finish</td>
+</tr>
+<tr>
+<td><code>TapAndPayNotAvailable</code></td>
+<td>The app cannot call the Tap and Pay API</td>
+</tr>
+<tr>
+<td><code>CouldNotEstablishSession(message, traceId?)</code></td>
+<td>The secure session with the Adyen backend could not be established</td>
+</tr>
+<tr>
+<td><code>SessionTokenRetrievalFailed(message)</code></td>
+<td>The <code>SessionTokenProvider</code> threw an exception or returned an unusable token</td>
+</tr>
+<tr>
+<td><code>ActivationDataUnavailable(message, traceId?)</code></td>
+<td>Activation data could not be retrieved or processed</td>
+</tr>
+<tr>
+<td><code>HttpError</code> — sealed: <code>Authentication(traceId, message?)</code> for 401/403, <code>Validation(traceId, message?)</code> for 422, <code>Server</code> for 500 and other unexpected codes</td>
+<td>An HTTP error occurred while communicating with the Adyen backend</td>
+</tr>
+<tr>
+<td><code>ProvisioningFailed(message)</code></td>
+<td>Unexpected SDK or wallet failure — the catch-all for the offline provisioning SDK's many Google Play service and tokenization failure variants</td>
+</tr>
+<tr>
+<td><code>TamperError(tamperCode)</code></td>
+<td>A RASP violation was detected and the request was blocked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trace-ids-and-http-errors">Trace IDs and HTTP errors<a class="headerlink" href="#trace-ids-and-http-errors" title="Link to this section">&para;</a></h3>
+<p><code>CouldNotEstablishSession</code>, <code>ActivationDataUnavailable</code>, and <code>HttpError</code> include an optional <code>traceId</code>. Share it with Adyen support to help locate the failed backend request. It comes from the response's <code>traceparent</code> header and is <code>null</code> if that header is missing or invalid.</p>
+<p><code>HttpError</code> has three variants:</p>
 <ul>
-<li><code>ApplicationCertificateError</code> — the bytes you supplied could not be parsed as an X.509 certificate.</li>
-<li><code>Error(message: String?)</code> — generic creation failure with optional reason.</li>
+<li><strong><code>Authentication</code></strong> — HTTP 401 or 403.</li>
+<li><strong><code>Validation</code></strong> — HTTP 422.</li>
+<li><strong><code>Server</code></strong> — HTTP 500 or any other unexpected non-2xx status.</li>
 </ul>
-<p><code>GooglePayNotSupported</code> and <code>InvalidSdkInput</code> from the SDK no longer occur at session creation: <code>GooglePayNotSupported</code> moves to <code>CanProvisionResult.CannotBeProvisioned</code>, and <code>InvalidSdkInput</code> no longer exists because there is no opaque input payload.</p>
-<p><strong>Sessions <code>CanProvisionResult.CannotBeProvisioned</code></strong> — supersedes the SDK's variants:</p>
-<ul>
-<li>All four SDK variants (<code>AlreadyExistsInWallet</code>, <code>ApiError</code>, <code>Error</code>, <code>UnknownFailure</code>) plus a <code>GooglePayNotSupported</code> branch that previously surfaced at create-time.</li>
-<li>New: <code>DecryptError</code>, <code>EncryptError</code>, <code>HttpError</code>, <code>SdkCertificateError</code>, <code>InvalidApplicationCertificate</code>, <code>PaymentInstrumentNotAllowed</code>, <code>SerializationError</code>, <code>TokenProviderError</code>, <code>TamperError</code>.</li>
-</ul>
-<p><strong>Sessions <code>ProvisionResult.Failure</code></strong> — supersedes the SDK's variants:</p>
-<ul>
-<li>New: <code>AlreadyProvisioned</code>, <code>Canceled</code>, <code>DecryptError</code>, <code>EncryptError</code>, <code>Error</code>, <code>HttpError</code>, <code>SdkCertificateError</code>, <code>InvalidApplicationCertificate</code>, <code>PaymentInstrumentNotAllowed</code>, <code>ProvisioningInProgress</code>, <code>SerializationError</code>, <code>TokenProviderError</code>, <code>ProvisioningSdkFailure</code>, <code>TapAndPayApiFailure</code>, <code>TapAndPayNotAvailable</code>, <code>TamperError</code>.</li>
-</ul>
-<p>Most of these can be mapped to a small set of UI states for typical applications (retryable transport error, non-retryable validation error, terminal "card is already in wallet"), but the Kotlin compiler will require each branch to be addressed explicitly.</p>
+<p><code>Authentication</code> and <code>Validation</code> include decrypted backend error text in <code>message</code> when available; otherwise it is <code>null</code>. <code>Server.message</code> contains fixed support guidance rather than backend error text. See <a href="../../essentials/getting-started/#7-handle-the-final-state">handling the final state</a> for details.</p>
+<p>Most of these variants map to a small set of UI states for typical applications (retryable transport error, non-retryable validation error, terminal "card is already in wallet"), but the Kotlin compiler will require each branch to be addressed explicitly when a <code>when</code> expression is exhaustive.</p>
 <h2 id="what-remains-unchanged">What remains unchanged<a class="headerlink" href="#what-remains-unchanged" title="Link to this section">&para;</a></h2>
 <ul>
-<li><strong>Google Push Provisioning API allowlisting.</strong> Both SDKs rely on Google's Push Provisioning API and the same allowlisting steps apply. See <a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a>. From release <code>0.6.0</code>, <code>play-services-tapandpay</code> is bundled inside the published <code>provisioning-sdk</code> artifact, so neither SDK requires you to host the library yourself.</li>
+<li><strong>Google Push Provisioning API allowlisting.</strong> Both SDKs rely on Google's Push Provisioning API and the same allowlisting steps apply. See <a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a>. Existing allowlisting for Google's legacy Tap and Pay push-provisioning API does not carry over to Unified Push Provisioning (UPP). If your app was previously approved for the legacy API, <a href="../../../google-push-provisioning-access/#get-your-app-allowlisted-by-google">request allowlisting again for UPP</a> before using SDK version <code>0.6.0</code> or later. From release <code>0.6.0</code>, <code>play-services-tapandpay</code> is bundled inside the published <code>provisioning-sdk</code> artifact, so neither SDK requires you to host the library yourself.</li>
 <li><strong><code>CardAddress</code>.</strong> Same fields, same package, no migration required.</li>
-<li><strong><code>activityProvider: () -&gt; Activity</code>.</strong> The lambda is invoked in the same way; pass the host Activity as before. It is called on demand (not at factory time), so it must always resolve to the currently-resumed Activity. If the Activity is destroyed when the lambda is called, the SDK will return a failure result. See <a href="../../../provisioning-sdk/essentials/getting-started/#lifecycle-guidance">Lifecycle guidance</a> for recommended patterns.</li>
+<li><strong><code>activityProvider: () -&gt; Activity</code>.</strong> The lambda is invoked in the same way; pass the host Activity as before. It is called on demand (not at factory time), so it must always resolve to the currently-resumed Activity. Do not rely on a failure result to detect a destroyed Activity; keep the provider lifecycle-aware. See <a href="../../../provisioning-sdk/essentials/getting-started/#lifecycle-guidance">Lifecycle guidance</a> for recommended patterns.</li>
 <li><strong><code>@AdyenExperimentalApi</code>.</strong> Both SDKs require the same opt-in annotation at call sites.</li>
 <li><strong>Minimum Android API and compileSdk requirements.</strong> Unchanged at API 26 / compileSdk 36.</li>
 </ul>
 <h2 id="step-by-step-migration">Step-by-step migration<a class="headerlink" href="#step-by-step-migration" title="Link to this section">&para;</a></h2>
 <ol>
 <li>
-<p><strong>Add the new dependency</strong> alongside the existing one so the migration can be shipped incrementally:</p>
+<p><strong><a href="../../essentials/getting-started/#3-add-the-card-provisioning-sessions-sdk-dependency">Add the new dependency</a>:</strong></p>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">"com.adyen.issuing.provisioning:provisioning-sdk:0.6.0"</span><span class="p">)</span><span class="w"> </span><span class="c1">// existing</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">"com.adyen.issuing.provisioning:provisioning-sessions:0.6.0"</span><span class="p">)</span><span class="w"> </span><span class="c1">// new</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">"com.adyen.issuing.provisioning:provisioning-sessions:0.6.0"</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
 </span></code></pre></div>
 </li>
 <li>
-<p><strong>Embed the application certificate.</strong> Place the certificate provided by Adyen in <code>res/raw/</code> (or another readable location) so it can be passed to <code>ProvisioningSession.create(...)</code> as an <code>InputStream</code>.</p>
+<p><strong><a href="../../essentials/getting-started/#1-embed-the-certificate">Embed the application certificate</a>.</strong> Place the certificate provided by Adyen in <code>res/raw/</code> (or another readable location) and load its DER-encoded bytes so they can be passed to <code>ProvisioningSession.create(...)</code> inside a <code>ProvisioningSessionConfiguration</code>.</p>
 </li>
 <li>
-<p><strong>Implement the session-token backend endpoint</strong> that proxies to Adyen's session API and returns the issued token. Integrate it into the client behind a <code>sessionTokenProvider</code> lambda.</p>
+<p><strong><a href="#what-replaces-them">Implement the session-token backend endpoint</a></strong> that proxies to Adyen's session API and returns the issued token. Integrate it into the client behind a <code>SessionTokenProvider</code> that wraps the token in a <code>SessionToken</code>. See <a href="../../essentials/getting-started/#2-fetch-a-session-token">Fetch a Session Token</a> for the request format.</p>
 </li>
 <li>
-<p><strong>Introduce a new repository or use-case</strong> that encapsulates the Session-based flow without disturbing the existing Card Provisioning SDK code path. The example app's <code>ProvisioningSessionsRepository</code> (alongside the existing <code>ProvisioningSdkRepository</code> implementing the same <code>ProvisioningRepository</code> interface) is the reference layout.</p>
+<p><strong><a href="#client-code-changes">Update the repository or use-case</a></strong> to use the Session-based flow, replacing the existing call sites using the <a href="#api-mapping">API mapping</a>. The <a href="../../../example-app/">example app</a>'s <code>ProvisioningSessionsRepository</code> is a reference for the new flow.</p>
 </li>
 <li>
-<p><strong>Switch call sites incrementally.</strong> A feature flag or runtime toggle (the example app uses a segmented button bound to a <code>ProvisioningMethod</code> enum) allows routing a percentage of traffic through the Card Provisioning Sessions SDK while leaving fallback to the Card Provisioning SDK in place.</p>
+<p><strong><a href="#result-type-changes">Update the error mapping</a></strong> to cover the <code>ProvisioningState</code> and <code>ProvisionResult</code> branches. Treat the backend-related variants conservatively — retry where transport-related; otherwise surface the failure and abort. Always <a href="../../essentials/getting-started/#8-respond-to-tampererror">handle <code>TamperError</code> explicitly</a> by invalidating the session on your backend.</p>
 </li>
 <li>
-<p><strong>Update the error mapping</strong> to cover the expanded <code>CanProvisionResult</code> and <code>ProvisionResult</code> branches. Treat the new <code>*Error</code> variants conservatively — retry where transport-related; otherwise surface the failure and abort.</p>
-</li>
-<li>
-<p><strong>Decommission the old API surface</strong> once the Card Provisioning Sessions SDK is rolled out: remove the Card Provisioning SDK dependency, delete the <code>OpcProvider</code> integration code, and retire the two <code>networkTokenActivationData</code> backend endpoints if no other consumers remain.</p>
+<p><strong><a href="#what-goes-away">Decommission the old API surface</a></strong> after migrating to the Card Provisioning Sessions SDK: remove the direct dependency on the offline provisioning SDK, delete the <code>OpcProvider</code> integration code, and retire the two <code>networkTokenActivationData</code> backend endpoints if no other consumers remain.</p>
 </li>
 </ol>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
-<li><a href="../../../provisioning-sdk/">Card Provisioning SDK</a> — the SDK you are migrating from</li>
-<li>
-<p><a href="../../essentials/getting-started/">Card Provisioning Sessions SDK — Getting Started</a> — fresh-integration guide</p>
-</li>
-<li>
-<p><a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a> — shared allowlisting prerequisite</p>
-</li>
-<li><a href="https://github.com/Adyen/adyen-issuing-android/blob/main/provisioning/sessions/RELEASE_NOTES">Release Notes</a> — version history</li>
+<li><a href="../../../provisioning-sdk/">Card Provisioning (Offline)</a> — the SDK you are migrating from</li>
+<li><a href="../../essentials/getting-started/">Card Provisioning Sessions — Getting Started</a> — fresh-integration guide</li>
+<li><a href="../../../example-app/">Example App</a> — runnable reference exercising both integrations from one screen</li>
+<li><a href="../../../google-push-provisioning-access/">Google Push Provisioning API Access</a> — shared allowlisting prerequisite</li>
+<li><a href="../../releases/">Release Notes</a> — version history</li>
 </ul>
 
 

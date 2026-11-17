@@ -6,14 +6,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Android SDKs for Adyen's card issuing product suite — Google Wallet provisioning (direct and session-based) and card reveal.">
+        <meta name="description" content="Android SDKs for Adyen's card issuing product suite — Google Wallet provisioning (direct and session-based).">
       
       
       
         <link rel="canonical" href="https://adyen.github.io/adyen-issuing-android/0.6.0-docs-preview/AdyenIssuingSdks/network-token-provisioning/troubleshooting/">
       
       
-        <link rel="prev" href="../google-push-provisioning-access/">
+        <link rel="prev" href="../example-app/">
       
       
         <link rel="next" href="../provisioning-sessions/">
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    Network Token Provisioning
+    Card Provisioning
   
 
     
@@ -341,7 +341,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Network Token Provisioning
+    Card Provisioning
   
 
           </label>
@@ -390,6 +390,34 @@
     
   
     Google Push Provisioning API Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example App
   
 
     
@@ -492,10 +520,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#provisioning-fails-with-googlepaynotsupported" class="md-nav__link">
+  <a href="#provisioning-fails-because-the-wallet-is-not-supported" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Provisioning fails with GooglePayNotSupported
+        Provisioning fails because the wallet is not supported
       
     </span>
   </a>
@@ -525,10 +553,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tamper-detection-tampererror-card-provisioning-sessions-sdk-only" class="md-nav__link">
+  <a href="#stale-or-destroyed-activity-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tamper detection (TamperError) — Card Provisioning Sessions SDK only
+        Stale or destroyed Activity reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamper-detection-tampererror-card-provisioning-sessions-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamper detection (TamperError) — Card Provisioning Sessions only
       
     </span>
   </a>
@@ -574,17 +613,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Card Provisioning Sessions SDK
+    Card Provisioning Sessions
   
 
     
@@ -595,12 +634,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Card Provisioning Sessions SDK
+    Card Provisioning Sessions
   
 
           </label>
@@ -737,10 +776,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
             
   
   
@@ -758,8 +797,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -816,10 +855,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_2" id="__nav_2_4_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_2" id="__nav_2_5_5_2_label" tabindex="0">
             
   
   
@@ -837,8 +876,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -876,65 +915,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_4_5_3" id="__nav_2_4_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Enum Classes
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Enum Classes
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -942,14 +922,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-environment/" class="md-nav__link">
+      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-token-provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ProvisioningEnvironment
+    SessionTokenProvider
   
 
     
@@ -990,10 +970,125 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_4" id="__nav_2_4_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_3" id="__nav_2_5_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-provisioning-session-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningSessionConfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SessionToken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5_4" id="__nav_2_5_5_4_label" tabindex="0">
             
   
   
@@ -1011,8 +1106,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1029,14 +1124,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-can-provision-result/" class="md-nav__link">
+      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions/-session-environment/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    CanProvisionResult
+    SessionEnvironment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provisioning-sessions/api/reference/com.adyen.issuing.mobile.provisioning.sessions.results/-provisioning-state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProvisioningState
   
 
     
@@ -1105,10 +1228,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_5_5" id="__nav_2_4_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_5_5" id="__nav_2_5_5_5_label" tabindex="0">
             
   
   
@@ -1126,8 +1249,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_5_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1236,17 +1359,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Card Provisioning SDK
+    Card Provisioning (Offline)
   
 
     
@@ -1257,12 +1380,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Card Provisioning SDK
+    Card Provisioning (Offline)
   
 
           </label>
@@ -1399,10 +1522,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
             
   
   
@@ -1420,8 +1543,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1478,10 +1601,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_2" id="__nav_2_5_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_2" id="__nav_2_6_5_2_label" tabindex="0">
             
   
   
@@ -1499,8 +1622,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1593,10 +1716,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_3" id="__nav_2_5_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_3" id="__nav_2_6_5_3_label" tabindex="0">
             
   
   
@@ -1614,8 +1737,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1680,10 +1803,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_4" id="__nav_2_5_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_4" id="__nav_2_6_5_4_label" tabindex="0">
             
   
   
@@ -1701,8 +1824,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1823,10 +1946,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_5_5" id="__nav_2_5_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5_5" id="__nav_2_6_5_5_label" tabindex="0">
             
   
   
@@ -1844,8 +1967,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_5_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_5_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2045,10 +2168,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#provisioning-fails-with-googlepaynotsupported" class="md-nav__link">
+  <a href="#provisioning-fails-because-the-wallet-is-not-supported" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Provisioning fails with GooglePayNotSupported
+        Provisioning fails because the wallet is not supported
       
     </span>
   </a>
@@ -2078,10 +2201,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tamper-detection-tampererror-card-provisioning-sessions-sdk-only" class="md-nav__link">
+  <a href="#stale-or-destroyed-activity-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tamper detection (TamperError) — Card Provisioning Sessions SDK only
+        Stale or destroyed Activity reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamper-detection-tampererror-card-provisioning-sessions-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamper detection (TamperError) — Card Provisioning Sessions only
       
     </span>
   </a>
@@ -2120,16 +2254,16 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this section">&para;</a></h1>
-<p>Common issues encountered when integrating the Network Token Provisioning SDKs (the <a href="../provisioning-sessions/">Card Provisioning Sessions SDK</a> and the <a href="../provisioning-sdk/">Card Provisioning SDK</a>), and how to resolve them.</p>
+<p>Common issues encountered when integrating the Card Provisioning SDKs (the <a href="../provisioning-sessions/">Card Provisioning Sessions SDK</a> and the <a href="../provisioning-sdk/">offline provisioning SDK</a>), and how to resolve them.</p>
 <p>Unless otherwise noted, every entry on this page applies to both SDKs — the underlying Google Tap and Pay integration, allowlisting requirements, and Google Wallet behaviour are shared.</p>
 <h2 id="google-tap-and-pay-dependency-not-found">Google Tap and Pay dependency not found<a class="headerlink" href="#google-tap-and-pay-dependency-not-found" title="Link to this section">&para;</a></h2>
-<p>From release <code>0.6.0</code> the Network Token Provisioning SDKs bundle <code>com.google.android.gms:play-services-tapandpay</code> inside the published <code>provisioning-sdk</code> artifact, so an integration on a current release no longer needs to resolve the artifact at all.</p>
+<p>From <code>0.6.0</code>, the published offline provisioning SDK artifact bundles <code>com.google.android.gms:play-services-tapandpay</code>. This also applies when using the Card Provisioning Sessions SDK, which depends on <code>provisioning-sdk</code>. Integrations no longer need to obtain or host this library separately unless their own code uses it directly.</p>
 <p>A resolution failure therefore has one of two causes:</p>
 <ul>
-<li><strong>You are integrating a release older than <code>0.6.0</code>.</strong> Upgrade to <code>0.6.0</code> or later.</li>
-<li><strong>Your own build declares a direct <code>play-services-tapandpay</code> dependency</strong> for use outside the Adyen SDK. The artifact is not published to any public Maven repository — request it through the Google allowlisting process and host it in your local Maven cache or an internal repository (never a public one).</li>
+<li><strong>You are using <code>0.4.1</code> or earlier.</strong> These versions require the Tap and Pay artifact to be obtained through Google's allowlisting process and hosted in your local Maven cache or an internal repository (never a public one). Upgrade to <code>0.6.0</code> or later to use the bundled library.</li>
+<li><strong>Your own build still declares a direct <code>play-services-tapandpay</code> dependency.</strong> Gradle resolves every dependency your build declares, and the copy bundled in the Adyen SDK does not satisfy it. If only the Adyen SDK used the library, remove the declaration after upgrading to <code>0.6.0</code> or later. If your own code uses it, you still need authorized access to the artifact.</li>
 </ul>
-<p>See <a href="../google-push-provisioning-access/">Google Push Provisioning API Access</a> for the allowlisting setup — from <code>0.6.0</code> the Adyen SDKs themselves need no artifact hosting.</p>
+<p>See <a href="../google-push-provisioning-access/">Google Push Provisioning API Access</a> for the allowlisting setup. App allowlisting is still required regardless of SDK version. Existing allowlisting for Google's legacy Tap and Pay push-provisioning API does not carry over to Unified Push Provisioning (UPP). If your app was previously approved for the legacy API, <a href="../google-push-provisioning-access/#get-your-app-allowlisted-by-google">request allowlisting again for UPP</a> before using SDK version <code>0.6.0</code> or later.</p>
 <h2 id="api-calls-fail-with-error-code-15009">API calls fail with error code <code>15009</code><a class="headerlink" href="#api-calls-fail-with-error-code-15009" title="Link to this section">&para;</a></h2>
 <p>A <code>15009</code> status code returned from a Google Tap and Pay API call indicates the calling app is not allowlisted by Google for the Push Provisioning API. Verify that the package name <strong>and</strong> the SHA-256 signing certificate fingerprint of the build you are running have both been registered through the <a href="https://support.google.com/googlepay/contact/upp_api_onboarding">Push Provisioning API allowlist process</a>.</p>
 <p>The allowlist is per package name + signing certificate, so every distinct certificate that will produce builds calling into the SDK has to be enrolled separately. In practice that means:</p>
@@ -2169,27 +2303,65 @@
 </tr>
 </tbody>
 </table>
-<p>All four Play tracks share a single app signing key, so one fingerprint covers internal, closed, open and production installs.</p>
+<p>Play testing and production tracks normally use the app signing key. If you have upgraded that key, Play may sign builds with different keys for different Android versions. Allowlist every app signing certificate used for supported devices.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Internal app sharing is the case most often missed. Play Console generates a dedicated internal test certificate for your app and re-signs <em>every</em> internal app sharing upload with it, regardless of which key you signed with — so its fingerprint differs from both your upload key and your app signing key. Until it is allowlisted, a build shared over an internal app sharing link fails with <code>15009</code> even though the identical code provisions correctly when installed from a test track.</p>
 </div>
 <p>See <a href="../google-push-provisioning-access/">Google Push Provisioning API Access</a> for the full prerequisites.</p>
-<h2 id="provisioning-fails-with-googlepaynotsupported">Provisioning fails with <code>GooglePayNotSupported</code><a class="headerlink" href="#provisioning-fails-with-googlepaynotsupported" title="Link to this section">&para;</a></h2>
-<p>Provisioning calls return a <code>GooglePayNotSupported</code> result when Google Pay support is not configured for the payment card. Check the card's network or BIN range configuration.</p>
+<h2 id="provisioning-fails-because-the-wallet-is-not-supported">Provisioning fails because the wallet is not supported<a class="headerlink" href="#provisioning-fails-because-the-wallet-is-not-supported" title="Link to this section">&para;</a></h2>
+<p>The Card Provisioning Sessions SDK returns <code>ProvisioningState.CannotProvision.WalletNotSupported</code>
+when the card cannot be added to the wallet, or <code>ProvisionResult.Failure.TapAndPayNotAvailable</code>
+when the app cannot call the Tap and Pay API. The offline provisioning SDK uses
+<code>GooglePayNotSupported</code> for the equivalent creation failure. Check the card's network or BIN
+range configuration and verify that the app is allowlisted for Google's Push Provisioning API.</p>
 <h2 id="canprovision-returns-a-canbeprovisioned-result-after-the-card-has-already-been-provisioned"><code>canProvision</code> returns a <code>CanBeProvisioned</code> result after the card has already been provisioned<a class="headerlink" href="#canprovision-returns-a-canbeprovisioned-result-after-the-card-has-already-been-provisioned" title="Link to this section">&para;</a></h2>
-<p>If a <code>canProvision</code> call reports the card as provisionable for a card that has already been added to Google Wallet, this is almost always an issuer-side configuration problem with the card scheme rather than an SDK bug. The most common root cause is a misconfigured application id at the scheme level.</p>
-<p>Validate by attempting to add the card to Google Wallet manually (outside the SDK). If manual provisioning shows the card as provisionable as well, the scheme-side configuration needs to be corrected before push provisioning can return the right state.</p>
+<p>If <code>canProvision()</code> or <code>provisioningState()</code> reports a previously added card as provisionable, first confirm that you are checking the same payment instrument, device, and wallet account. Re-check the state after the provisioning flow completes.</p>
+<p>If the result remains unexpected, record the SDK result and available status code, verify the running build's allowlisting, and ask Adyen to check issuer and card-scheme configuration, including the application identifier. Do not include PAN, CVC, PIN, tokens, or opaque provisioning payloads in diagnostics.</p>
+<p>Comparing with manual provisioning can help isolate the issue, but it is a different flow. Its behaviour alone does not prove a scheme configuration problem.</p>
 <h2 id="something-went-wrong-please-try-again-during-the-provisioning-flow">"Something went wrong, please try again" during the provisioning flow<a class="headerlink" href="#something-went-wrong-please-try-again-during-the-provisioning-flow" title="Link to this section">&para;</a></h2>
-<p>A generic Google Wallet error of the form <em>"Something went wrong, please try again"</em> surfaced during a provisioning flow is also typically a card-configuration problem rather than an integration fault.</p>
-<p>A quick way to confirm: try to manually provision the payment instrument (without going through the SDK). If manual provisioning fails with the same generic error, push provisioning is expected to fail too — the fix is on the card-configuration side.</p>
-<h2 id="tamper-detection-tampererror-card-provisioning-sessions-sdk-only">Tamper detection (<code>TamperError</code>) — Card Provisioning Sessions SDK only<a class="headerlink" href="#tamper-detection-tampererror-card-provisioning-sessions-sdk-only" title="Link to this section">&para;</a></h2>
+<p>A generic Google Wallet message such as <em>"Something went wrong, please try again"</em> does not identify the root cause.</p>
+<ol>
+<li>Inspect the returned SDK result and any Google status code. Check backend failures and retain any available <code>traceId</code> for support.</li>
+<li>Verify package-name and signing-certificate allowlisting for the installed build.</li>
+<li>Check connectivity, Google Play services, device compatibility, and the selected wallet account.</li>
+<li>Compare with manual provisioning if supported for the card. A matching error is a useful diagnostic, not proof of a shared cause.</li>
+<li>If the issue persists, contact Adyen support with the SDK version, device/Android version, result type, status code, and, if available, trace ID. Ask for issuer and card-scheme configuration checks without sending sensitive payloads.</li>
+</ol>
+<h2 id="stale-or-destroyed-activity-reference">Stale or destroyed Activity reference<a class="headerlink" href="#stale-or-destroyed-activity-reference" title="Link to this section">&para;</a></h2>
+<p>Both SDKs require <code>activityProvider</code> to return the currently resumed Activity hosting provisioning. A lambda such as <code>{ this }</code> or <code>{ hostActivity }</code> captures one instance; it does not follow Activity recreation after rotation or navigation.</p>
+<p>Neither SDK checks whether the returned Activity is finishing, destroyed, or resumed. Creation can succeed with a stale reference because the provider is called later. A destroyed Activity does not necessarily throw, so there is <strong>no guaranteed stale-Activity error result</strong>.</p>
+<p>If the provider or provisioning UI launch throws an ordinary exception, the results are:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Card Provisioning (Offline): <code>provision()</code></td>
+<td><code>ProvisionResult.Failure.Other(error)</code></td>
+</tr>
+<tr>
+<td>Card Provisioning Sessions: <code>provisionCard()</code></td>
+<td><code>ProvisionResult.Failure.ProvisioningFailed(message)</code></td>
+</tr>
+</tbody>
+</table>
+<p>The SDK also uses the provider when first creating its Google Tap and Pay client. An ordinary exception there becomes <code>CanProvisionResult.CannotBeProvisioned.Error(throwable)</code> during <code>canProvision()</code>, or <code>ProvisioningState.CannotProvision.ProvisioningFailed(message)</code> during <code>provisioningState()</code>. Coroutine cancellation propagates rather than becoming a failure result.</p>
+<p>Keep Activity-scoped SDK instances with their host and recreate them when the host is recreated. For longer-lived instances, use a lifecycle-aware provider that resolves the current provisioning host and clears it when that host pauses or is destroyed. Start operations only while the host is resumed; do not use SDK results as lifecycle checks.</p>
+<p>See <a href="../provisioning-sdk/essentials/getting-started/#lifecycle-guidance">Lifecycle guidance</a> for a provider example that applies to both SDKs.</p>
+<p><a id="tamper-detection-tampererror-card-provisioning-sessions-sdk-only"></a></p>
+<h2 id="tamper-detection-tampererror-card-provisioning-sessions-only">Tamper detection (<code>TamperError</code>) — Card Provisioning Sessions only<a class="headerlink" href="#tamper-detection-tampererror-card-provisioning-sessions-only" title="Link to this section">&para;</a></h2>
 <p>The Card Provisioning Sessions SDK performs Runtime Application Self-Protection (RASP) checks at sensitive call sites. When a threat is detected (root, hooking, memory scanning, emulator, virtual environment, compromised hardware, or a debugger attached to a release build), the SDK halts sensitive work on the client side and returns a <code>TamperError</code> result.</p>
 <p>Treat a <code>TamperError</code> as a signal to <strong>invalidate the user's session on your backend</strong> so the session token is refused regardless of what the compromised client does next, and surface a neutral error in the UI without hinting at the reason. The full rationale and an end-to-end example are covered in the <a href="../../security/security-guide/#9-respond-to-tamper-signals">Security Guide → Respond to Tamper Signals</a>.</p>
+<p>If a <code>TamperError</code> occurs unexpectedly on a device you believe is operating normally, contact Adyen Support with the SDK version, device model, Android version, affected operation, and <code>tamperCode</code>. This helps us investigate possible false positives and improve detection where appropriate. Continue to treat the result as a security signal; keep the code and suspected reason out of user-facing messages.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
-<li><a href="../provisioning-sessions/essentials/getting-started/">Card Provisioning Sessions SDK — Getting Started</a> — integration walkthrough</li>
-<li><a href="../provisioning-sdk/essentials/getting-started/">Card Provisioning SDK — Getting Started</a> — integration walkthrough</li>
+<li><a href="../provisioning-sessions/essentials/getting-started/">Card Provisioning Sessions — Getting Started</a> — integration walkthrough</li>
+<li><a href="../provisioning-sdk/essentials/getting-started/">Card Provisioning (Offline) — Getting Started</a> — integration walkthrough</li>
 <li><a href="../google-push-provisioning-access/">Google Push Provisioning API Access</a> — allowlisting prerequisites</li>
 <li><a href="../../security/security-guide/">Security Guide</a> — defensive measures against common Android attack surfaces</li>
 <li><a href="https://github.com/Adyen/adyen-issuing-android/issues">GitHub issue tracker</a> — search existing reports or open a new one</li>
