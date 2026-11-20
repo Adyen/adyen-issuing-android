@@ -20,6 +20,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -57,8 +58,12 @@ fun ExampleAppTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            setStatusBarColor(window, colorScheme.primary.toArgb())
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            val statusBarColor = colorScheme.primary
+            setStatusBarColor(window, statusBarColor.toArgb())
+            // Derive the icon appearance from the colour actually painted behind the status
+            // bar rather than from darkTheme, so dynamic colour schemes stay legible too.
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
+                statusBarColor.luminance() > STATUS_BAR_LUMINANCE_THRESHOLD
         }
     }
 
@@ -68,6 +73,9 @@ fun ExampleAppTheme(
         content = content
     )
 }
+
+/** Above this relative luminance the status-bar background counts as light, so icons must be dark. */
+private const val STATUS_BAR_LUMINANCE_THRESHOLD = 0.5f
 
 private fun setStatusBarColor(window: Window, color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {

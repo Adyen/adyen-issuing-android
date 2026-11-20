@@ -22,20 +22,36 @@ import com.adyen.issuing.mobile.provisioning.exampleapp.ui.MainScreen
 import com.adyen.issuing.mobile.provisioning.exampleapp.ui.theme.ExampleAppTheme
 import com.adyen.issuing.mobile.provisioning.exampleapp.viewmodel.MainViewModel
 import com.adyen.issuing.mobile.provisioning.exampleapp.viewmodel.MainViewModelFactory
+import java.security.cert.CertificateFactory
 
 class MainActivity : ComponentActivity() {
 
-    // Create the MainViewModel and pass in the Activity provider.
-    // The Activity provider is a lambda that returns the current Activity.
-    // This is used by the provisioning SDK to launch the Google Wallet add-to-wallet flow.
     private val viewModel: MainViewModel by viewModels {
-        MainViewModelFactory { this }
+        // Normalize the bundled PEM placeholder to the DER bytes required by the Sessions API.
+        val certBytes = resources.openRawResource(R.raw.fake_app_cert).use {
+            CertificateFactory.getInstance("X.509").generateCertificate(it).encoded
+        }
+        MainViewModelFactory(
+            applicationContext = applicationContext,
+            applicationCertificateBytes = certBytes
+        )
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.onHostResumed(this)
+    }
+
+    override fun onPause() {
+        viewModel.onHostPaused(this)
+        super.onPause()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             val cardState by viewModel.cardState.collectAsState()
+            val provisioningMethod by viewModel.provisioningMethod.collectAsState()
             ExampleAppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -43,8 +59,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     MainScreen(
                         card = cardState,
-                        lastFour = "1234",
+                        // Static last-four matching the hardcoded demo payment instrument.
+                        // Replace with a value from the card data API if dynamic card display is needed.
+                        lastFour = "8952",
                         onAddToWalletClicked = viewModel::provisionCard,
+                        selectedMethod = provisioningMethod,
+                        onMethodSelected = viewModel::onProvisioningMethodSelected,
                         onRetryClicked = viewModel::retry
                     )
                 }

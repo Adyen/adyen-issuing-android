@@ -25,7 +25,7 @@ sealed interface CardState {
     /**
      * The card is currently being provisioned.
      */
-    data object Provisioning: CardState
+    data object Provisioning : CardState
 
     /**
      * The card has already been added to the Google Wallet.
@@ -41,6 +41,9 @@ sealed interface CardState {
      * The card is disabled and cannot be provisioned.
      */
     data object Disabled : CardState
+
+    /** Stop this integration until the user can establish a new authenticated backend session. */
+    data object SessionInvalidated : CardState
 
     /**
      * An error occurred while checking the card state or provisioning the card.

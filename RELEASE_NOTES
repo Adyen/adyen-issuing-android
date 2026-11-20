@@ -1,5 +1,0 @@
-## Changed
-* Android Gradle Plugin version updated to 9.1.0
-
-## Fixed
-* Issue where provisioning could fail for Mastercard cards when no wallet exists

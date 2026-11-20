@@ -11,104 +11,88 @@ package com.adyen.issuing.mobile.provisioning.exampleapp.viewmodel
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.adyen.issuing.mobile.provisioning.client.CardProvisioning
-import com.adyen.issuing.mobile.provisioning.client.annotation.AdyenExperimentalApi
 import com.adyen.issuing.mobile.provisioning.client.data.CardAddress
-import com.adyen.issuing.mobile.provisioning.client.results.CanProvisionResult
-import com.adyen.issuing.mobile.provisioning.client.results.CardProvisioningCreateResult
-import com.adyen.issuing.mobile.provisioning.client.results.ProvisionResult
-import com.adyen.issuing.mobile.provisioning.exampleapp.backend.Backend
-import com.adyen.issuing.mobile.provisioning.exampleapp.data.CardActivationResult
+import com.adyen.issuing.mobile.provisioning.exampleapp.ResumedActivityProvider
 import com.adyen.issuing.mobile.provisioning.exampleapp.data.CardState
+import com.adyen.issuing.mobile.provisioning.exampleapp.data.ProvisioningMethod
+import com.adyen.issuing.mobile.provisioning.exampleapp.repository.ProvisioningRepository
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import java.util.concurrent.CancellationException
 
-@OptIn(AdyenExperimentalApi::class)
 class MainViewModel(
     private val paymentInstrumentId: String,
-    private val backend: Backend,
-    private val activityProvider: () -> Activity,
+    private val provisioningSdkRepository: ProvisioningRepository,
+    private val provisioningSessionsRepository: ProvisioningRepository,
+    private val activityProvider: ResumedActivityProvider
 ) : ViewModel() {
 
-    private var cardProvisioning: CardProvisioning? = null
+    private var fetchJob: Job? = null
+    private var provisionJob: Job? = null
 
     private val mutableCardState = MutableStateFlow<CardState>(CardState.Loading)
     val cardState: StateFlow<CardState> = mutableCardState.asStateFlow()
 
-    init {
+    private val mutableProvisioningMethod = MutableStateFlow(ProvisioningMethod.SESSIONS)
+    val provisioningMethod: StateFlow<ProvisioningMethod> = mutableProvisioningMethod.asStateFlow()
+
+    fun onHostResumed(activity: Activity) {
+        activityProvider.onResume(activity)
+        if (fetchJob == null) fetchState()
+    }
+
+    fun onHostPaused(activity: Activity) {
+        activityProvider.onPause(activity)
+    }
+
+    /**
+     * Set the [ProvisioningMethod] which specifies whether the provisioning is performed using the
+     * Provisioning SDK or Provisioning Sessions.
+     */
+    fun onProvisioningMethodSelected(method: ProvisioningMethod) {
+        if (method == mutableProvisioningMethod.value || provisionJob?.isActive == true || isSessionInvalidated()) {
+            return
+        }
+        mutableProvisioningMethod.value = method
+        mutableCardState.value = CardState.Loading
         fetchState()
     }
 
     fun retry() {
+        if (provisionJob?.isActive == true || isSessionInvalidated()) return
         mutableCardState.value = CardState.Loading
         fetchState()
     }
+
+    // The repository flag is set before backend revocation finishes, while the card state is still Loading.
+    // Checking it stops a method switch from cancelling the fetch before SessionInvalidated is published.
+    private fun isSessionInvalidated() =
+        mutableCardState.value == CardState.SessionInvalidated || provisioningSessionsRepository.isSessionInvalidated
 
     /**
      * Fetch the card activation data from the backend and initialize the provisioning SDK with it
      */
     private fun fetchState() {
-        viewModelScope.launch {
+        fetchJob?.cancel()
+        fetchJob = viewModelScope.launch {
             try {
-                // Fetch activation data from the backend for the given payment instrument ID.
-                val cardState =
-                    backend.requestCardActivation(paymentInstrumentId).let { cardActivationResult ->
-                        when (cardActivationResult) {
-                            // Use the activation data to initialize the provisioning SDK.
-                            is CardActivationResult.Active -> CardProvisioning.create(
-                                cardActivationResult.sdkInput, activityProvider
-                            ).let { provisioningCreateResult ->
-                                when (provisioningCreateResult) {
-                                    is CardProvisioningCreateResult.Success -> {
-                                        cardProvisioning = provisioningCreateResult.cardProvisioning
-                                        getCardState()
-                                    }
-
-                                    is CardProvisioningCreateResult.Failed.GooglePayNotSupported -> CardState.NotSupported
-                                    is CardProvisioningCreateResult.Failed.InvalidSdkInput -> CardState.Error(
-                                        message = "Activation data is invalid"
-                                    )
-                                }
-                            }
-
-                            CardActivationResult.Disabled -> CardState.Disabled
-                        }
-                    }
+                val cardState = when (mutableProvisioningMethod.value) {
+                    ProvisioningMethod.SDK -> provisioningSdkRepository.getCardState(paymentInstrumentId)
+                    ProvisioningMethod.SESSIONS -> provisioningSessionsRepository.getCardState(
+                        paymentInstrumentId
+                    )
+                }
                 mutableCardState.emit(cardState)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                mutableCardState.emit(CardState.Error("Failed to fetch card state: ${e.message}"))
+                mutableCardState.emit(CardState.Error("Could not check the card state"))
             }
         }
     }
-
-    private suspend fun getCardState(): CardState =
-        cardProvisioning?.canProvision()?.let {
-            when (it) {
-                // Card can be provisioned.
-                is CanProvisionResult.CanBeProvisioned -> CardState.NotAddedToWallet
-                // Card has already been added to the wallet.
-                is CanProvisionResult.CannotBeProvisioned.AlreadyExistsInWallet -> CardState.AddedToWallet
-                // The Google Tap and Pay API returned an error.
-                is CanProvisionResult.CannotBeProvisioned.ApiError -> CardState.Error(
-                    message = "A Google Tap and Pay API error occurred, Error Code: ${it.statusCode}"
-                )
-                // The operation failed with an exception.
-                is CanProvisionResult.CannotBeProvisioned.Error -> CardState.Error(
-                    message = it.throwable.message
-                )
-                // Something unexpected happened!
-                is CanProvisionResult.CannotBeProvisioned.UnknownFailure -> CardState.Error(
-                    message = "Unknown failure"
-                )
-
-            }
-
-        } ?: CardState.Error(message = "Provisioning client not set")
 
     /**
      * Try to provision the card.
@@ -116,39 +100,36 @@ class MainViewModel(
      * This will fail in this example app due to the lack of live backend data which is needed to
      * construct valid Opaque Payment Card data.
      */
-    fun provisionCard(
-        cardholderName: String = "John Doe",
-        cardAddress: CardAddress = CardAddress()
-    ) {
-        viewModelScope.launch {
-            // Disable the `Add to Google Wallet` button while we attempt to provision the card.
-            mutableCardState.emit(CardState.Provisioning)
-            // Request the SDK Output value from the provisioning SDK.
-            val state = cardProvisioning?.provision(
-                cardDisplayName = cardholderName,
-                cardAddress = cardAddress,
-                opcProvider = { paymentInstrumentId, sdkOutput ->
-                    // This lambda is called by the SDK when it needs the Opaque Payment Card (OPC) data.
-                    // You should make a network request to your backend here to fetch the OPC data.
-                    // The backend will need the `sdkOutput` string to generate the OPC.
-                    //
-                    // If the request fails, you should throw an exception to propagate the error.
-                    // The SDK will catch the exception and return a failure result.
-                    // You can also implement a retry mechanism here if desired.
+    fun provisionCard(cardDisplayName: String = "Adyen Business Card", cardAddress: CardAddress = CardAddress()) {
+        if (
+            provisionJob?.isActive == true ||
+            mutableCardState.value != CardState.NotAddedToWallet ||
+            isSessionInvalidated()
+        ) {
+            return
+        }
+        mutableCardState.value = CardState.Provisioning
+        provisionJob = viewModelScope.launch {
+            try {
+                val state = when (mutableProvisioningMethod.value) {
+                    ProvisioningMethod.SDK -> provisioningSdkRepository.provisionCard(
+                        paymentInstrumentId,
+                        cardDisplayName,
+                        cardAddress
+                    )
 
-                    // For this example app, we just return a dummy value since we don't have a real backend.
-                    // In a real app, you would return the OPC string here.
-                    val opcResponse = backend.requestOpaquePaymentCardData(paymentInstrumentId, sdkOutput)
-                    opcResponse.sdkInput
+                    ProvisioningMethod.SESSIONS -> provisioningSessionsRepository.provisionCard(
+                        paymentInstrumentId,
+                        cardDisplayName,
+                        cardAddress
+                    )
                 }
-            )
-                ?.let { provisioningResult ->
-                    when (provisioningResult) {
-                        is ProvisionResult.Success -> CardState.AddedToWallet
-                        else -> CardState.Error("Failed to provision card $provisioningResult")
-                    }
-                } ?: CardState.Error("Provisioning Failed")
-            mutableCardState.emit(state)
+                mutableCardState.emit(state)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                mutableCardState.emit(CardState.Error("Could not provision the card"))
+            }
         }
     }
 }

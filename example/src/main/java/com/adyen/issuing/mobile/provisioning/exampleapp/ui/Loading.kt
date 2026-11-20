@@ -22,13 +22,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 internal fun Loading(modifier: Modifier = Modifier) {
     Box(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize()
     ) {
         CircularProgressIndicator(
             modifier = Modifier.size(82.dp)
                 .align(Alignment.Center),
             strokeWidth = 3.dp,
-            color = MaterialTheme.colorScheme.onBackground,
+            color = MaterialTheme.colorScheme.onBackground
         )
     }
 }

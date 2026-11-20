@@ -32,11 +32,7 @@ import com.adyen.issuing.mobile.provisioning.exampleapp.R
 import com.adyen.issuing.mobile.provisioning.exampleapp.ui.theme.ExampleAppTheme
 
 @Composable
-internal fun AdyenCardDisplay(
-    modifier: Modifier = Modifier,
-    lastFour: String?,
-    disabled: Boolean = false,
-) {
+internal fun AdyenCardDisplay(modifier: Modifier = Modifier, lastFour: String?, disabled: Boolean = false) {
     val shape = RoundedCornerShape(10.dp)
     val isLightTheme = !isSystemInDarkTheme()
     val borderColor = if (isLightTheme) Color.Black else Color.White.copy(alpha = 0.2f)
@@ -44,7 +40,7 @@ internal fun AdyenCardDisplay(
     Box(
         modifier = modifier
             .padding(horizontal = 24.dp)
-            .shadow(elevation = 18.dp, shape),
+            .shadow(elevation = 18.dp, shape)
     ) {
         val colorFilter = if (disabled) {
             ColorFilter.colorMatrix(grayScaleMatrix)
@@ -57,20 +53,20 @@ internal fun AdyenCardDisplay(
                 .clip(shape)
                 .border(
                     BorderStroke(1.dp, borderColor),
-                    shape,
+                    shape
                 ),
 
             painter = painterResource(id = R.drawable.adyen_mastercard),
             contentDescription = null,
-            colorFilter = colorFilter,
+            colorFilter = colorFilter
         )
         Text(
             modifier = Modifier
                 .align(Alignment.BottomStart)
                 .padding(16.dp),
-            text = "•••• •••• •••• $lastFour",
+            text = "•••• •••• •••• ${lastFour ?: "••••"}",
             color = Color.White,
-            fontSize = 16.sp,
+            fontSize = 16.sp
         )
     }
 }
@@ -88,6 +84,6 @@ private val grayScaleMatrix = ColorMatrix(
         0.33f, 0.33f, 0.33f, 0f, 0f,
         0.33f, 0.33f, 0.33f, 0f, 0f,
         0.33f, 0.33f, 0.33f, 0f, 0f,
-        0f, 0f, 0f, 1f, 0f,
-    ),
+        0f, 0f, 0f, 1f, 0f
+    )
 )

@@ -1,0 +1,10 @@
+Initial general availability (GA) release.
+
+## Features
+* Session-based card provisioning to Google Wallet using Google's Unified Push Provisioning (UPP) API through `provisioning-sdk` `0.6.0`.
+* Session creation with `ProvisioningSessionConfiguration` containing DER-encoded application certificate bytes, payment instrument IDs, and a `SessionEnvironment` (`Live` or `Test`). A `SessionTokenProvider` supplies fresh backend tokens wrapped in an opaque `SessionToken`.
+* `provisioningState(paymentInstrumentId)` reports `CanProvision`, `Provisioned`, or `CannotProvision`. `provisionCard` handles the activation-data exchange and wallet provisioning flow without a per-step OPC callback.
+* Structured creation and operation results through `ProvisioningSessionCreateResult`, `ProvisioningState`, and `ProvisionResult`. Backend-related failures expose an optional `traceId` for support correlation.
+* Runtime tamper detection returns `TamperError` results. Integrations must invalidate the user's session on their backend when these occur.
+
+See [Getting Started](https://adyen.github.io/adyen-issuing-android/AdyenIssuingSdks/0.6.0/network-token-provisioning/provisioning-sessions/essentials/getting-started/) for integration guidance, or [Migrating from provisioning-sdk](https://adyen.github.io/adyen-issuing-android/AdyenIssuingSdks/0.6.0/network-token-provisioning/provisioning-sessions/migration/from-provisioning-sdk/) to upgrade an existing direct SDK integration.

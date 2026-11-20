@@ -1,15 +1,19 @@
 [versions]
-android-gradle = "9.1.0" # make sure to update version in libs.versions.toml and buildLibs.versions.toml as well.
+android-gradle = "9.1.1" # make sure to update version in libs.versions.toml and buildLibs.versions.toml as well.
 compose-runtime = "1.10.0"
-provisioning = "0.4.1"
-kotlin = "2.3.10"
+provisioning = "0.6.0"
+kotlin = "2.3.21"
 material3 = "1.4.0"
 coreKtx = "1.17.0"
 lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.2"
+junit = "4.13.2"
+mockk = "1.14.9"
+kotlinx-coroutines = "1.11.0"
 
 [libraries]
 adyen-provisioning-sdk = { group = "com.adyen.issuing.provisioning", name = "provisioning-sdk", version.ref = "provisioning" }
+adyen-provisioning-sessions = { group = "com.adyen.issuing.provisioning", name = "provisioning-sessions", version.ref = "provisioning" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -18,6 +22,9 @@ androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", ve
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose-runtime" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose-runtime" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle" }

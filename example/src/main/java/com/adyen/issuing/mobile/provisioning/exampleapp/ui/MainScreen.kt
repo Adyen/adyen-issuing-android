@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -22,6 +23,9 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.adyen.issuing.mobile.provisioning.exampleapp.R
 import com.adyen.issuing.mobile.provisioning.exampleapp.data.CardState
+import com.adyen.issuing.mobile.provisioning.exampleapp.data.ProvisioningMethod
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,7 +48,9 @@ fun MainScreen(
     lastFour: String,
     card: CardState,
     onAddToWalletClicked: () -> Unit,
-    onRetryClicked: () -> Unit,
+    selectedMethod: ProvisioningMethod,
+    onMethodSelected: (ProvisioningMethod) -> Unit,
+    onRetryClicked: () -> Unit
 ) {
     Scaffold(
         topBar = {
@@ -62,7 +69,7 @@ fun MainScreen(
         ) {
             Column(
                 modifier = Modifier.align(Alignment.Center),
-                horizontalAlignment = Alignment.CenterHorizontally,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 CardDetails(lastFour = lastFour)
                 Spacer(Modifier.height(40.dp))
@@ -74,23 +81,28 @@ fun MainScreen(
                 // If the card is provisioning, show the button but disable it (or show a loading indicator).
                 when (card) {
                     CardState.NotAddedToWallet -> GoogleWalletButton(onClick = onAddToWalletClicked)
-                    CardState.Provisioning -> GoogleWalletButton(onClick = {})
+                    CardState.Provisioning -> GoogleWalletButton(enabled = false, onClick = {})
                     CardState.AddedToWallet -> CardLabel(R.string.already_added_to_google_pay)
                     CardState.Disabled -> CardLabel(R.string.disabled)
                     CardState.NotSupported -> CardLabel(R.string.does_not_support_google_pay)
                     CardState.Loading -> Loading()
+                    CardState.SessionInvalidated ->
+                        CardLabel("Unable to continue. Sign in again to start a new session.")
                     is CardState.Error -> ErrorState(card.message ?: "An error occurred", onRetryClicked)
                 }
+                Spacer(Modifier.height(20.dp))
+                ProvisioningMethodSelectionButtons(
+                    selectedMethod = selectedMethod,
+                    enabled = card != CardState.Provisioning && card != CardState.SessionInvalidated,
+                    onMethodSelected = onMethodSelected
+                )
             }
         }
     }
 }
 
 @Composable
-private fun ColumnScope.CardDetails(
-    modifier: Modifier = Modifier,
-    lastFour: String
-) {
+private fun ColumnScope.CardDetails(modifier: Modifier = Modifier, lastFour: String) {
     Column(
         modifier = modifier
             .padding(start = 30.dp)
@@ -118,7 +130,7 @@ fun CardLabel(label: String) {
             .padding(horizontal = 24.dp, vertical = 8.dp),
         fontSize = 18.sp,
         color = MaterialTheme.colorScheme.onBackground,
-        textAlign = TextAlign.Center,
+        textAlign = TextAlign.Center
     )
 }
 
@@ -137,6 +149,38 @@ fun ErrorState(message: String, onRetryClicked: () -> Unit) {
     }
 }
 
+@Composable
+fun ProvisioningMethodSelectionButtons(
+    modifier: Modifier = Modifier,
+    selectedMethod: ProvisioningMethod,
+    enabled: Boolean = true,
+    onMethodSelected: (ProvisioningMethod) -> Unit
+) {
+    SingleChoiceSegmentedButtonRow(
+        modifier = modifier
+            .padding(horizontal = 40.dp)
+            .fillMaxWidth()
+    ) {
+        ProvisioningMethod.entries.forEachIndexed { index, provisioningMethod ->
+            SegmentedButton(
+                shape = SegmentedButtonDefaults.itemShape(
+                    index = index,
+                    count = ProvisioningMethod.entries.size
+                ),
+                onClick = { onMethodSelected(provisioningMethod) },
+                enabled = enabled,
+                selected = provisioningMethod == selectedMethod,
+                label = {
+                    Text(
+                        text = stringResource(provisioningMethod.labelResource),
+                        maxLines = 1
+                    )
+                }
+            )
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
@@ -144,6 +188,8 @@ fun MainScreenPreview() {
         lastFour = "1234",
         card = CardState.NotAddedToWallet,
         onAddToWalletClicked = {},
+        selectedMethod = ProvisioningMethod.SDK,
+        onMethodSelected = {},
         onRetryClicked = {}
     )
 }

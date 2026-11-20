@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.adyen.issuing.mobile.provisioning.exampleapp.R
@@ -35,10 +36,7 @@ import com.adyen.issuing.mobile.provisioning.exampleapp.R
  * for more information on how to display the "Add to Google Wallet" button.
  */
 @Composable
-internal fun GoogleWalletButton(
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit,
-) {
+internal fun GoogleWalletButton(modifier: Modifier = Modifier, enabled: Boolean = true, onClick: () -> Unit) {
     Box(
         modifier = modifier
             .padding(8.dp)
@@ -46,14 +44,14 @@ internal fun GoogleWalletButton(
             .height(48.dp)
             .clip(RoundedCornerShape(24.dp))
             .background(Color(0xFF1F1F1F))
-            .clickable { onClick() }
+            .clickable(enabled = enabled) { onClick() }
     ) {
         Image(
             alignment = Alignment.Center,
             contentScale = ContentScale.None,
             modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.google_wallet_button),
-            contentDescription = null,
+            contentDescription = stringResource(R.string.add_to_google_wallet)
         )
     }
 }
